@@ -33,17 +33,13 @@ module.exports = class Care {
           }),
           [
             {
-              title: i18n.__("care.order"),
-              payload: "CARE_ORDER"
+              title: i18n.__("care.opt1"),
+              payload: "CARE_OPT1"
             },
             {
-              title: i18n.__("care.billing"),
-              payload: "CARE_BILLING"
+              title: i18n.__("care.opt2"),
+              payload: "CARE_OPT2"
             },
-            {
-              title: i18n.__("care.other"),
-              payload: "CARE_OTHER"
-            }
           ]
         );
         break;
