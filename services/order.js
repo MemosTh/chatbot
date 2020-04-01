@@ -20,7 +20,7 @@ module.exports = class Order {
     let response;
 
     switch (payload) {
-      case "TRACK_ORDER":
+      case "ESHOP":
         response = Response.genQuickReply(i18n.__("order.prompt"), [
           {
             title: i18n.__("order.account"),

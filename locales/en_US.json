@@ -3,17 +3,21 @@
     "greeting": "Welcome to Original Coast Clothing {{user_first_name}}! Click get started to enjoy our sample automated messaging experience. If you want to build a similar one visit https://fb.me/get-sample-oc"
   },
   "menu": {
-    "support": "Customer Support",
-    "order": "Order updates",
-    "help": "Talk to an agent",
-    "suggestion": "Outfit suggestions",
-    "shop": "Shop now",
+    "help": "επικοινωνία μαζί μας",
+    "moreInfo": "πληροφορίες προϊόντος",
+    "eshop": "αγοράσετε προϊόν",
     "start_over": "Start over"
   },
+  "final": {
+    "yes": "Ναι",
+    "no": "Όχι",
+    "end":"Ευχαριστούμε! Ελπίζουμε να σας βοηθήσαμε! Θα χαρούμε να επικοινωνήσετε ξανά μαζί μας στο μέλλον."
+  },
   "get_started": {
-    "welcome": "Hi {{userFirstName}}! Welcome to Original Coast Clothing where you'll find styles for every occasion.",
-    "guidance": "At any time, use the menu below to navigate through the features",
-    "help": "What we can do to help you today?"
+    "welcome": "Γεία σου {{userFirstName}}! Καλως ήρθατε στη Miele! Είμαστε χαρούμενοι που βρίσκετε εδώ!",
+    "guidance": "Πως μπορούμε να σας εξυπηρετήσουμε;",
+    "help": "Διαλέξτε μια απο τις παρακάτω επιλογές",
+    "help2":"Μπορούμε να κάνουμε κάτι άλλο για εσάς;"
   },
   "leadgen": {
     "promo": "Hi {{userFirstName}}, finding great outfits is now easier and more convenient.",
@@ -47,8 +51,10 @@
     "status": "Your order is on it’s way, expect to have it in 3 days."
   },
   "care": {
-    "prompt": "To connect you with the right team please let me know what this is about?",
-    "order": "Order Inquiries",
+    "opt1": "Μπορείτε να μας καλέστε μας στα τηλέφωνα 801 222 4444 & +30 210 67 94 444, Δευτέρα έως Παρασκευή 09:00 – 17:00",
+    "opt2": "Να πλοηγηθείτε μέσω Videoκλήσης στο Miele Experience Center στην Αθήνα και να ανακαλύψετε live τα προϊόντα Miele,
+καλώντας στο +30 69 74 850 525 (υποστηρίζει τα Μέσα Δικτύωσης: Viber, Messenger, Whatsapp)
+Δευτέρα έως Παρασκευή από τις 09:00 έως τις 17:00",
     "billing": "Billing Issues",
     "other": "Other",
     "issue": "Hi {{userFirstName}}, my name is {{agentFirstName}}, I'm here to assist you with any questions you might have about your {{topic}}.",

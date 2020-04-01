@@ -102,12 +102,16 @@ module.exports = class Receive {
         Response.genText(i18n.__("get_started.guidance")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
-            title: i18n.__("menu.suggestion"),
+            title: i18n.__("menu.Help"),
+            payload: "CARE_HELP"
+          },
+          {
+            title: i18n.__("menu.moreInfo"),
             payload: "CURATION"
           },
           {
-            title: i18n.__("menu.help"),
-            payload: "CARE_HELP"
+            title: i18n.__("menu.eshop"),
+            payload: "ESHOP"
           }
         ])
       ];
@@ -183,13 +187,13 @@ module.exports = class Receive {
       payload === "GITHUB"
     ) {
       response = Response.genNuxMessage(this.user);
-    } else if (payload.includes("CURATION") || payload.includes("COUPON")) {
+    } else if (payload.includes("CURATION")) {
       let curation = new Curation(this.user, this.webhookEvent);
       response = curation.handlePayload(payload);
     } else if (payload.includes("CARE")) {
       let care = new Care(this.user, this.webhookEvent);
       response = care.handlePayload(payload);
-    } else if (payload.includes("ORDER")) {
+    } else if (payload.includes("ESHOP")) {
       response = Order.handlePayload(payload);
     } else if (payload.includes("CSAT")) {
       response = Survey.handlePayload(payload);
