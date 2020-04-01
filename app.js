@@ -8,6 +8,8 @@
  * https://developers.facebook.com/docs/messenger-platform/getting-started/sample-apps/original-coast-clothing
  */
 
+ const http = require('http');
+
 "use strict";
 
 // Imports dependencies and set up http server
