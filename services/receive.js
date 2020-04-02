@@ -36,11 +36,15 @@ module.exports = class Receive {
         let message = event.message;
 
         if (message.quick_reply) {
+          console.log('tap quickReply');
           responses = this.handleQuickReply();
+          console.log(responses);
         } else if (message.attachments) {
           responses = this.handleAttachmentMessage();
         } else if (message.text) {
+          console.log('tap genText handleTextMessage');
           responses = this.handleTextMessage();
+          console.log(responses);
         }
       } else if (event.postback) {
         responses = this.handlePostback();
