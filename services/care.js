@@ -28,13 +28,13 @@ module.exports = class Care {
 
     switch (payload) {
       case "CARE_HELP":
-      let opt1 = this.genText(
+      let opt1 = Response.genText(
         i18n.__("care.opt1"));
 
 
-      let opt2 = this.genText(i18n.__("care.opt2"));
+      let opt2 = Response.genText(i18n.__("care.opt2"));
 
-      let curation = this.genQuickReply(i18n.__("care.help"), [
+      let curation = Response.genQuickReply(i18n.__("care.help"), [
 
         {
           title: i18n.__("menu.yes"),
@@ -45,7 +45,7 @@ module.exports = class Care {
           payload: "CARE_HELP_NO"
         },
       ]);
-      response = [opt1, opt2, curation];
+      response = [opt1, opt2, curation]
       // return [welcome, guide, curation];
       //   response = Response.genQuickReply(
       //     i18n.__("care.prompt", {
