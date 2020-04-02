@@ -10,7 +10,7 @@
   },
   "final": {
     "yes": "Ναι",
-    "no": "Όχι",
+    "no": "Όχι"
   },
   "get_started": {
     "welcome": "Γεία σου {{userFirstName}}! Καλως ήρθατε στη Miele! Είμαστε χαρούμενοι που βρίσκετε εδώ!",
@@ -50,9 +50,7 @@
   },
   "care": {
     "opt1": "Μπορείτε να μας καλέστε μας στα τηλέφωνα 801 222 4444 & +30 210 67 94 444, Δευτέρα έως Παρασκευή 09:00 – 17:00",
-    "opt2": "Να πλοηγηθείτε μέσω Videoκλήσης στο Miele Experience Center στην Αθήνα και να ανακαλύψετε live τα προϊόντα Miele,
-καλώντας στο +30 69 74 850 525 (υποστηρίζει τα Μέσα Δικτύωσης: Viber, Messenger, Whatsapp)
-Δευτέρα έως Παρασκευή από τις 09:00 έως τις 17:00",
+    "opt2": "Να πλοηγηθείτε μέσω Videoκλήσης στο Miele Experience Center στην Αθήνα και να ανακαλύψετε live τα προϊόντα Miele, καλώντας στο +30 69 74 850 525 (υποστηρίζει τα Μέσα Δικτύωσης: Viber, Messenger, Whatsapp) Δευτέρα έως Παρασκευή από τις 09:00 έως τις 17:00",
     "billing": "Billing Issues",
     "other": "Other",
     "issue": "Hi {{userFirstName}}, my name is {{agentFirstName}}, I'm here to assist you with any questions you might have about your {{topic}}.",
