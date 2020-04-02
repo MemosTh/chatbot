@@ -145,7 +145,7 @@ module.exports = class Response {
       },
       {
         title: i18n.__("menu.shop"),
-        payload: "CURATION"
+        payload: "ESHOP"
       },
     ]);
 
