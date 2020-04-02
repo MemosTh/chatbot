@@ -21,7 +21,7 @@ module.exports = class GraphAPi {
     console.log(requestBody)
 
     // Send the HTTP request to the Messenger Platform
-    
+
     request({
       "uri": "https://graph.facebook.com/v2.6/me/messages",
       "qs": { "access_token": config.pageAccesToken },
@@ -30,6 +30,8 @@ module.exports = class GraphAPi {
     }, (err, res, body) => {
       if (!err) {
         console.log('message sent!')
+        console.log(res)
+        console.log(body)
       } else {
         console.error("Unable to send message:" + err);
       }
