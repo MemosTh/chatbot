@@ -7,8 +7,8 @@
     "moreInfo": "πληροφορίες προϊόντος",
     "shop": "αγοράσετε προϊόν",
     "start_over": "Start over",
-    "yes":"yes",
-    "no":"no"
+    "yes":"Ναι",
+    "no":"Όχι"
   },
   "get_started": {
     "welcome": "Γεία σου {{userFirstName}}! Καλως ήρθατε στη Miele! Είμαστε χαρούμενοι που βρίσκετε εδώ!",

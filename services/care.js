@@ -46,26 +46,6 @@ module.exports = class Care {
         },
       ]);
       response = [opt1, or, opt2, curation]
-      // return [welcome, guide, curation];
-      //   response = Response.genQuickReply(
-      //     i18n.__("care.prompt", {
-      //       userFirstName: this.user.firstName
-      //     }),
-      //     [
-      //       {
-      //         title: i18n.__("care.order"),
-      //         payload: "CARE_ORDER"
-      //       },
-      //       {
-      //         title: i18n.__("care.billing"),
-      //         payload: "CARE_BILLING"
-      //       },
-      //       {
-      //         title: i18n.__("care.other"),
-      //         payload: "CARE_OTHER"
-      //       }
-      //     ]
-      //   );
         break;
       case "CARE_HELP_YES":
         // Send using the Persona for order issues
@@ -109,24 +89,6 @@ module.exports = class Care {
         ];
         break;
 
-      case "CARE_OTHER":
-        // Send using the Persona for customer care issues
-
-        response = [
-          Response.genTextWithPersona(
-            i18n.__("care.default", {
-              userFirstName: this.user.firstName,
-              agentFirstName: config.personaCare.name
-            }),
-            config.personaCare.id
-          ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaCare.id
-          ),
-          Survey.genAgentRating(config.personaCare.name)
-        ];
-        break;
     }
 
     return response;
