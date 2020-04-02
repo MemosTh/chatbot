@@ -31,7 +31,7 @@ module.exports = class Care {
       let opt1 = Response.genText(
         i18n.__("care.opt1"));
 
-      let or = Response.genText(i18n._("care.or"));
+      let or = Response.genText(i18n.__("care.or"));
       let opt2 = Response.genText(i18n.__("care.opt2"));
 
       let curation = Response.genQuickReply(i18n.__("care.help"), [
@@ -84,24 +84,10 @@ module.exports = class Care {
 
         break;
 
-      case "CARE_BILLING":
+      case "CARE_HELP_NO":
         // Send using the Persona for billing issues
 
-        response = [
-          Response.genTextWithPersona(
-            i18n.__("care.issue", {
-              userFirstName: this.user.firstName,
-              agentFirstName: config.personaBilling.name,
-              topic: i18n.__("care.billing")
-            }),
-            config.personaBilling.id
-          ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaBilling.id
-          ),
-          Survey.genAgentRating(config.personaBilling.name)
-        ];
+       response = Response.genText(i18n.__("care.end"));
         break;
 
       case "CARE_SALES":
