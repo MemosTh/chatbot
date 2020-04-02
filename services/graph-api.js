@@ -309,19 +309,22 @@ module.exports = class GraphAPi {
     };
 
     // Send the HTTP request to the Activities API
+
     request(
       {
-        uri: `${config.mPlatfom}/${config.appId}/activities`,
+        uri: `${config.mPlatfom}/me/messages`,
+        qs: {
+          access_token: config.pageAccesToken
+        },
         method: "POST",
-        form: requestBody
+        json: requestBody
       },
       error => {
-        if (!error) {
-          console.log(`FBA event '${eventName}'`);
-        } else {
-          console.error(`Unable to send FBA event '${eventName}':` + error);
+        if (error) {
+          console.error("Unable to send message:", error);
         }
       }
     );
+
   }
 };
