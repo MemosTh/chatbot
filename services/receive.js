@@ -178,6 +178,7 @@ module.exports = class Receive {
     // Log CTA event in FBA
     GraphAPi.callFBAEventsAPI(this.user.psid, payload);
 
+
     let response;
 
     // Set the response based on the payload
@@ -221,6 +222,13 @@ module.exports = class Receive {
         text: `This is a default postback message for payload: ${payload}!`
       };
     }
+    let request_body = {
+      "recipient": {
+        "id": this.user.psid
+      },
+      "message": response
+    }
+    GraphAPi.callSendAPI(request_body)
 
     return response;
   }

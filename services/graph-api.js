@@ -17,22 +17,27 @@ const request = require("request"),
 
 module.exports = class GraphAPi {
   static callSendAPI(requestBody) {
+    console.log('im in call send Api')
+    console.log(requestBody)
+
     // Send the HTTP request to the Messenger Platform
     request(
-      {
-        uri: `${config.mPlatfom}/me/messages`,
-        qs: {
-          access_token: config.pageAccesToken
+        {
+          uri: `${config.mPlatfom}/me/messages`,
+          qs: {
+            access_token: config.pageAccesToken
+          },
+          method: "POST",
+          json: requestBody
         },
-        method: "POST",
-        json: requestBody
-      },
-      error => {
-        if (error) {
-          console.error("Unable to send message:", error);
+        error => {
+          if (error) {
+            console.error("Unable to send message:", error);
+          }
         }
-      }
     );
+
+
   }
 
   static callMessengerProfileAPI(requestBody) {
