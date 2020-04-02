@@ -25,27 +25,47 @@ module.exports = class Care {
   handlePayload(payload) {
     let response;
 
+
     switch (payload) {
       case "CARE_HELP":
-        response = Response.genQuickReply(
-          i18n.__("care.prompt", {
-            userFirstName: this.user.firstName
-          }),
-          [
-            {
-              title: i18n.__("care.order"),
-              payload: "CARE_ORDER"
-            },
-            {
-              title: i18n.__("care.billing"),
-              payload: "CARE_BILLING"
-            },
-            {
-              title: i18n.__("care.other"),
-              payload: "CARE_OTHER"
-            }
-          ]
-        );
+      let opt1 = this.genText(
+        i18n.__("care.opt1"));
+
+
+      let opt2 = this.genText(i18n.__("care.opt2"));
+
+      let curation = this.genQuickReply(i18n.__("care.help"), [
+
+        {
+          title: i18n.__("menu.yes"),
+          payload: "CARE_HELP_YES"
+        },
+        {
+          title: i18n.__("menu.no"),
+          payload: "CARE_HELP_NO"
+        },
+      ]);
+      response = [opt1, opt2, curation];
+      // return [welcome, guide, curation];
+      //   response = Response.genQuickReply(
+      //     i18n.__("care.prompt", {
+      //       userFirstName: this.user.firstName
+      //     }),
+      //     [
+      //       {
+      //         title: i18n.__("care.order"),
+      //         payload: "CARE_ORDER"
+      //       },
+      //       {
+      //         title: i18n.__("care.billing"),
+      //         payload: "CARE_BILLING"
+      //       },
+      //       {
+      //         title: i18n.__("care.other"),
+      //         payload: "CARE_OTHER"
+      //       }
+      //     ]
+      //   );
         break;
       case "CARE_ORDER":
         // Send using the Persona for order issues
