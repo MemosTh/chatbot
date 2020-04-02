@@ -21,17 +21,11 @@ module.exports = class Order {
 
     switch (payload) {
       case "ESHOP":
-       response = Response.genGenericTemplate(
-        `https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg`,
-        i18n.__("Welcome to miele"),
-        i18n.__("Here you can find anything"),
-        [
-          Response.genWebUrlButton(
-            i18n.__("Go to eshop"),
-            `https://www.miele.gr/domestic/shop-2151.htm`
-          )
-        ]
-      )
+       let button =  Response.genWebUrlButton(
+           i18n.__("Go to eshop"),
+           `https://www.miele.gr/domestic/shop-2151.htm`
+       )
+          response = Response.genButtonTemplate("test",button)
         break;
 
       case "SEARCH_ORDER":

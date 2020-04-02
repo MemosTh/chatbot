@@ -114,6 +114,7 @@ module.exports = class Response {
   }
 
   static genWebUrlButton(title, url) {
+
     let response = {
       type: "web_url",
       title: title,
