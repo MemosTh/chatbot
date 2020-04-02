@@ -168,6 +168,7 @@ module.exports = class Curation {
       case "CURATION_BUDGET_30_PARTY":
       case "CURATION_BUDGET_50_PARTY":
         response = this.genCurationResponse(payload);
+        console.log(response);
         break;
 
       case "CURATION_OTHER_STYLE":
