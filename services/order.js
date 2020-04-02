@@ -42,7 +42,8 @@ module.exports = class Order {
         break;
 
       case "ORDER_NUMBER":
-        response = Response.genWebUrlButton('trol','https://www.miele.gr/')
+        let button = Response.genWebUrlButton('trol','https://www.miele.gr/')
+          response = Response.genButtonTemplate("what do you want",button)
         break;
 
       case "LINK_ORDER":
