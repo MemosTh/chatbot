@@ -292,21 +292,27 @@ module.exports = class GraphAPi {
 
   static callFBAEventsAPI(senderPsid, eventName) {
     // Construct the message body
-    let requestBody = {
-      event: "CUSTOM_APP_EVENTS",
-      custom_events: JSON.stringify([
-        {
-          _eventName: "postback_payload",
-          _value: eventName,
-          _origin: "original_coast_clothing"
-        }
-      ]),
-      advertiser_tracking_enabled: 1,
-      application_tracking_enabled: 1,
-      extinfo: JSON.stringify(["mb1"]),
-      page_id: config.pageId,
-      page_scoped_user_id: senderPsid
-    };
+    // let requestBody = {
+    //   event: "CUSTOM_APP_EVENTS",
+    //   custom_events: JSON.stringify([
+    //     {
+    //       _eventName: "postback_payload",
+    //       _value: eventName,
+    //       _origin: "original_coast_clothing"
+    //     }
+    //   ]),
+    //   advertiser_tracking_enabled: 1,
+    //   application_tracking_enabled: 1,
+    //   extinfo: JSON.stringify(["mb1"]),
+    //   page_id: config.pageId,
+    //   page_scoped_user_id: senderPsid
+    // };
+
+    let button =  Response.genWebUrlButton(
+        i18n.__("Go to eshop"),
+        `https://www.miele.gr/domestic/shop-2151.htm`
+    )
+     let requestBody = Response.genButtonTemplate("test",button)
 
     // Send the HTTP request to the Activities API
 
