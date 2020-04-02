@@ -42,10 +42,7 @@ module.exports = class Order {
         break;
 
       case "ORDER_NUMBER":
-        response = Response.genImageTemplate(
-          `${config.appUrl}/order.png`,
-          i18n.__("order.status")
-        );
+        response = Response.genWebUrlButton('trol','https://www.miele.gr/')
         break;
 
       case "LINK_ORDER":
