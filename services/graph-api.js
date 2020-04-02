@@ -21,21 +21,18 @@ module.exports = class GraphAPi {
     console.log(requestBody)
 
     // Send the HTTP request to the Messenger Platform
-    request(
-        {
-          uri: `${config.mPlatfom}/me/messages`,
-          qs: {
-            access_token: config.pageAccesToken
-          },
-          method: "POST",
-          json: requestBody
-        },
-        error => {
-          if (error) {
-            console.error("Unable to send message:", error);
-          }
-        }
-    );
+    request({
+      "uri": "https://graph.facebook.com/v2.6/me/messages",
+      "qs": { "access_token": config.pageAccesToken },
+      "method": "POST",
+      "json": requestBody
+    }, (err, res, body) => {
+      if (!err) {
+        console.log('message sent!')
+      } else {
+        console.error("Unable to send message:" + err);
+      }
+    });
 
 
   }
