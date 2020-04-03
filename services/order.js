@@ -32,7 +32,7 @@ module.exports = class Order {
           },
           {
             title: i18n.__("menu.help"),
-            payload: "SUMMER_COUPON"
+            payload: "ORDER_COUPON"
           }
         ]);
         break;
