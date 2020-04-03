@@ -25,7 +25,7 @@ module.exports = class GraphAPi {
     request({
       uri: 'https://graph.facebook.com/v3.2/me/messages',
       qs: {
-        access_token: config.FB_PAGE_TOKEN
+        access_token: config.pageAccesToken
       },
       method: 'POST',
       json: requestBody
