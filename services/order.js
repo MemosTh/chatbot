@@ -51,7 +51,7 @@ module.exports = class Order {
           Response.genText(i18n.__("order.dialog")),
           Response.genText(i18n.__("order.searching")),
           Response.genImageTemplate(
-            `${config.appUrl}/order.png`,
+            `https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png`,
             i18n.__("order.status")
           )
         ];
