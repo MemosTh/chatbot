@@ -38,7 +38,7 @@ module.exports = class Order {
         break;
 
       case "SEARCH_ORDER":
-        response = Response.genText(i18n.__("order.number"));
+        response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png','memos','this is trol',)
         break;
 
       case "ORDER_NUMBER":
