@@ -171,11 +171,11 @@ module.exports = class Response {
   }
 
   static genPostbackButton(title, payload) {
-    let response = {
+    let response = [{
       type: "postback",
       title: title,
       payload: payload
-    };
+    }];
 
     return response;
   }
