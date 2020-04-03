@@ -32,13 +32,14 @@ module.exports = class Order {
           },
           {
             title: i18n.__("menu.help"),
-            payload: "LINK_ORDER"
+            payload: "SUMMER_COUPON"
           }
         ]);
         break;
 
       case "SEARCH_ORDER":
-        response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png','memos','this is trol',)
+        let button1 = Response.genWebUrlButton('trol','https://www.miele.gr/')
+        response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png','memos','this is trol',button1)
         break;
 
       case "ORDER_NUMBER":
@@ -46,13 +47,18 @@ module.exports = class Order {
           response = Response.genButtonTemplate("what do you want",button)
         break;
 
-      case "LINK_ORDER":
+      case "SUMMER_COUPON":
         response = [
-          Response.genText(i18n.__("order.dialog")),
-          Response.genText(i18n.__("order.searching")),
-          Response.genImageTemplate(
-            `https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png`,
-            i18n.__("order.status")
+          Response.genText(
+              i18n.__("leadgen.promo", {
+                userFirstName: this.user.firstName
+              })
+          ),
+          Response.genGenericTemplate(
+              `${config.appUrl}/coupon.png`,
+              i18n.__("leadgen.title"),
+              i18n.__("leadgen.subtitle"),
+              [Response.genPostbackButton(i18n.__("leadgen.apply"), "COUPON_50")]
           )
         ];
         break;
