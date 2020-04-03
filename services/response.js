@@ -42,7 +42,20 @@ module.exports = class Response {
               subtitle: subtitle,
               image_url: image_url,
               buttons: buttons
-            }
+            },
+            {
+              title: title,
+              subtitle: subtitle,
+              image_url: image_url,
+              buttons: buttons
+            },
+            {
+              title: title,
+              subtitle: subtitle,
+              image_url: image_url,
+              buttons: buttons
+            },
+
           ]
         }
       }
