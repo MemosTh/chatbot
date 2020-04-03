@@ -32,7 +32,7 @@ module.exports = class Order {
           },
           {
             title: i18n.__("menu.help"),
-            payload: "CARE_ORDER"
+            payload: "LINK_ORDER"
           }
         ]);
         break;
