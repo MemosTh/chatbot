@@ -61,7 +61,7 @@ module.exports = class Order {
           response = Response.genButtonTemplate("what do you want",button)
         break;
 
-      case "SUMMER_COUPON":
+      case "ORDER_COUPON":
         response = Response.genGenericVideo()
         break;
     }
