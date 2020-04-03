@@ -62,19 +62,7 @@ module.exports = class Order {
         break;
 
       case "SUMMER_COUPON":
-        response = [
-          Response.genText(
-              i18n.__("leadgen.promo", {
-                userFirstName: this.user.firstName
-              })
-          ),
-          Response.genGenericTemplate(
-              `${config.appUrl}/coupon.png`,
-              i18n.__("leadgen.title"),
-              i18n.__("leadgen.subtitle"),
-              [Response.genPostbackButton(i18n.__("leadgen.apply"), "COUPON_50")]
-          )
-        ];
+        response = Response.genGenericVideo()
         break;
     }
 
