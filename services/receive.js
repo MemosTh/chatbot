@@ -230,7 +230,7 @@ module.exports = class Receive {
     }
     GraphAPi.callSendAPI(request_body)
 
-    return response;
+
   }
 
   handlePrivateReply(type,object_id) {

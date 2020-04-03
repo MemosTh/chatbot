@@ -142,6 +142,7 @@ app.post("/webhook", (req, res) => {
             );
             let receiveMessage = new Receive(users[senderPsid], webhookEvent);
 
+            return receiveMessage.handleMessage();
           });
       } else {
         i18n.setLocale(users[senderPsid].locale);
@@ -153,6 +154,7 @@ app.post("/webhook", (req, res) => {
         );
         let receiveMessage = new Receive(users[senderPsid], webhookEvent);
 
+        return receiveMessage.handleMessage();
       }
     });
   } else {
