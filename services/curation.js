@@ -152,9 +152,8 @@ module.exports = class Curation {
 
             type: "web_url",
             url: "https://www.miele.gr/domestic/shop-2151.htm",
-            title: "Μετάβαση στο E-shop",
-            messenger_extensions: true,
-            webview_height_ratio: "tall"
+            title: "view",
+
           },
 
         ];
