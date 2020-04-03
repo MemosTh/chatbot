@@ -51,7 +51,7 @@ module.exports = class Curation {
     }
         ]
         console.log(buttons);
-        response = Response.genGenericTemplate(elements, buttons)
+        response = Response.genGenericList(elements, buttons)
         console.log(response);
         break;
 
