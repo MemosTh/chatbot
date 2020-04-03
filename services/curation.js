@@ -156,14 +156,6 @@ module.exports = class Curation {
             messenger_extensions: true,
             webview_height_ratio: "tall"
           },
-          {
-
-            type: "web_url",
-            url: "https://www.miele.gr/domestic/shop-2151.htm",
-            title: "Μετάβαση στο E-shop",
-            messenger_extensions: true,
-            webview_height_ratio: "tall"
-          }
 
         ];
           response = Response.genGenericList(buttons)

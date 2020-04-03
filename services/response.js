@@ -62,7 +62,13 @@ module.exports = class Response {
               subtitle: "Ποια κατηγορία σας ενδιαφέρει;",
               image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg",
               buttons: buttons
-            }
+            },
+            {
+              title: "Οι κατηγορίες μας" ,
+              subtitle: "Ποια κατηγορία σας ενδιαφέρει;",
+              image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg",
+              buttons: buttons
+            },
           ],
           buttons: [
             {
