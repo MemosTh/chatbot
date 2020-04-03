@@ -29,16 +29,29 @@ module.exports = class Curation {
 
       case "CURATION":
 
+        let elements = [
+          {
+            image_url:'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+            title:"Επίσημη αντιπροσωπεία Miele",
+            subtitle:"τεστ"
+          }
+        ]
+
 
         let buttons = [
           {
             type: "postback",
             title: "view",
             payload: "THIS_IS_TEST"
-          }
+          },
+          {
+          type: "postback",
+          title: "view",
+          payload: "THIS_IS_TEST"
+    }
         ]
         console.log(buttons);
-        response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg', 'Επίσημη αντιπροσωπεία Miele', 'Καλώς ήλθατε στο e shop μας', buttons)
+        response = Response.genGenericTemplate(elements, buttons)
         console.log(response);
         break;
 

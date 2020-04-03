@@ -62,37 +62,35 @@ module.exports = class Response {
     };
     return response;
   }
-  static genGenericList(buttons){
+  static genGenericList(elements,buttons){
     let response = {
       attachment: {
         type: "template",
         payload: {
-          template_type: "list",
-          top_element_style: "compact",
-          elements: [
-            {
-              title: "Οι κατηγορίες μας" ,
-              subtitle: "Ποια κατηγορία σας ενδιαφέρει;",
-              image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg",
-              buttons: buttons
-            },
-            {
-              title: "Οι κατηγορίες μας" ,
-              subtitle: "Ποια κατηγορία σας ενδιαφέρει;",
-              image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg",
-              buttons: buttons
-            },
-          ],
-          buttons: [
-            {
-              title: "View More",
-              type: "postback",
-              payload: "ESHOP"
-            }
-          ]
+          template_type: "generic",
+          elements: []
         }
       }
     };
+
+    for (let element of elements) {
+      response["elements"].push({
+        title: element["title"],
+        subtitle: element["subtitle"],
+        image_url: element["image_url"],
+        buttons: []
+      });
+    }
+
+    for (let button of buttons){
+      response["buttons"].push({
+        title:button["title"],
+        type:"button",
+        payload:button["payload"]
+
+      })
+    }
+
     return response;
 
   }
