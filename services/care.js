@@ -28,21 +28,21 @@ module.exports = class Care {
 
     switch (payload) {
       case "CARE_HELP":
-      // let opt1 = Response.genText(
-      //   i18n.__("care.opt1"));
-      //
-      // let or = Response.genText(i18n.__("care.or"));
-      // let opt2 = Response.genText(i18n.__("care.opt2"));
+      let opt1 = Response.genText(
+        i18n.__("care.opt1"));
 
-        let opt1= Response.genImageTemplate(
-            `${config.appUrl}/order.png`,
-            i18n.__("care.opt1")
-        );
-        let or = Response.genText(i18n.__("care.or"));
-        let opt2 = Response.genImageTemplate(
-            `${config.appUrl}/order.png`,
-            i18n.__("care.opt2")
-        );
+      let or = Response.genText(i18n.__("care.or"));
+      let opt2 = Response.genText(i18n.__("care.opt2"));
+
+        // let opt1= Response.genImageTemplate(
+        //     `${config.appUrl}/order.png`,
+        //     i18n.__("care.opt1")
+        // );
+        // let or = Response.genText(i18n.__("care.or"));
+        // let opt2 = Response.genImageTemplate(
+        //     `${config.appUrl}/order.png`,
+        //     i18n.__("care.opt2")
+        // );
         let curation = Response.genQuickReply(i18n.__("care.help"), [
 
         {
