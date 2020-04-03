@@ -48,6 +48,29 @@ module.exports = class Response {
       }
     };
 
+
+
+    return response;
+  }
+
+  static genGenericVideo() {
+    let response = {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "media",
+          elements: [
+            {
+              media_type: "video",
+              url:"https://www.facebook.com/Miele.Hellas/posts/2854297454656333"
+            }
+          ]
+        }
+      }
+    };
+
+
+
     return response;
   }
 
@@ -77,7 +100,7 @@ module.exports = class Response {
         type: "template",
         payload: {
           template_type: "button",
-          text: title,
+          text: "memos",
           buttons: buttons
         }
       }

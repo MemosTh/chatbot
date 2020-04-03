@@ -228,7 +228,7 @@ module.exports = class Receive {
       },
       "message": response
     }
-    //GraphAPi.callSendAPI(request_body)
+    GraphAPi.callSendAPI(request_body)
 
     return response;
   }
