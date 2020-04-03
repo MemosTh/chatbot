@@ -168,7 +168,7 @@ module.exports = class Response {
       },
       {
         title: i18n.__("menu.shop"),
-        payload: "TRACK_ORDER"
+        payload: "ESHOP"
       },
     ]);
 
