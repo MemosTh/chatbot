@@ -47,10 +47,35 @@ module.exports = class Response {
         }
       }
     };
-
-
-
     return response;
+  }
+  static genGenericList(buttons){
+    let response = {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "list",
+          top_element_style: "compact",
+          elements: [
+            {
+              title: "Οι κατηγορίες μας" ,
+              subtitle: "Ποια κατηγορία σας ενδιαφέρει;",
+              image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000143919_Web.288x162.jpg",
+              buttons: buttons
+            }
+          ],
+          buttons: [
+            {
+              title: "View More",
+              type: "postback",
+              payload: "ESHOP"
+            }
+          ]
+        }
+      }
+    };
+    return response;
+
   }
 
   static genGenericVideo() {

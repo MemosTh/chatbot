@@ -68,18 +68,105 @@ module.exports = class Curation {
           )
         ];
         break;
+        let testlist = {
+        attachment: {
+        "type": "template",
+            "payload": {
+          "template_type": "list",
+              "top_element_style": "compact",
+              "elements": [
+            {
+              "title": "Classic T-Shirt Collection",
+              "subtitle": "See all our colors",
+              "image_url": "https://peterssendreceiveapp.ngrok.io/img/collection.png",
+              "buttons": [
+                {
+                  "title": "View",
+                  "type": "web_url",
+                  "url": "https://peterssendreceiveapp.ngrok.io/collection",
+                  "messenger_extensions": true,
+                  "webview_height_ratio": "tall",
+                  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                }
+              ]
+            },
+            {
+              "title": "Classic White T-Shirt",
+              "subtitle": "See all our colors",
+              "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=100",
+                "messenger_extensions": false,
+                "webview_height_ratio": "tall"
+              }
+            },
+            {
+              "title": "Classic Blue T-Shirt",
+              "image_url": "https://peterssendreceiveapp.ngrok.io/img/blue-t-shirt.png",
+              "subtitle": "100% Cotton, 200% Comfortable",
+              "default_action": {
+                "type": "web_url",
+                "url": "https://peterssendreceiveapp.ngrok.io/view?item=101",
+                "messenger_extensions": true,
+                "webview_height_ratio": "tall",
+                "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+              },
+              "buttons": [
+                {
+                  "title": "Shop Now",
+                  "type": "web_url",
+                  "url": "https://peterssendreceiveapp.ngrok.io/shop?item=101",
+                  "messenger_extensions": true,
+                  "webview_height_ratio": "tall",
+                  "fallback_url": "https://peterssendreceiveapp.ngrok.io/"
+                }
+              ]
+            }
+          ],
+              "buttons": [
+            {
+              "title": "View More",
+              "type": "postback",
+              "payload": "payload"
+            }
+          ]
+        }
+      }
+    };
 
       case "CURATION":
-        response = Response.genQuickReply(i18n.__("curation.prompt"), [
+        // response = Response.genQuickReply(i18n.__("curation.prompt"), [
+        //   {
+        //     title: i18n.__("curation.me"),
+        //     payload: "CURATION_FOR_ME"
+        //   },
+        //   {
+        //     title: i18n.__("curation.someone"),
+        //     payload: "CURATION_SOMEONE_ELSE"
+        //   }
+        // ]);
+
+
+        let buttons = [
           {
-            title: i18n.__("curation.me"),
-            payload: "CURATION_FOR_ME"
+
+            type: "web_url",
+            url: "https://www.miele.gr/domestic/shop-2151.htm",
+            title: "Μετάβαση στο E-shop",
+            messenger_extensions: true,
+            webview_height_ratio: "tall"
           },
           {
-            title: i18n.__("curation.someone"),
-            payload: "CURATION_SOMEONE_ELSE"
+
+            type: "web_url",
+            url: "https://www.miele.gr/domestic/shop-2151.htm",
+            title: "Μετάβαση στο E-shop",
+            messenger_extensions: true,
+            webview_height_ratio: "tall"
           }
-        ]);
+
+        ];
+          response = Response.genGenericList(buttons)
         break;
 
       case "CURATION_FOR_ME":
