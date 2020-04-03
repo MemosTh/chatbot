@@ -33,8 +33,16 @@ module.exports = class Curation {
           {
             image_url:'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
             title:"Επίσημη αντιπροσωπεία Miele",
-            subtitle:"τεστ"
+            subtitle:"τεστ",
+            buttons:[]
+          },
+          {
+            image_url:'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+            title:"Επίσημη αντιπροσωπεία Miele",
+            subtitle:"τεστ",
+            buttons:[]
           }
+
         ]
 
 
@@ -50,8 +58,15 @@ module.exports = class Curation {
           payload: "THIS_IS_TEST"
     }
         ]
-        console.log(buttons);
-        response = Response.genGenericList(elements, buttons)
+
+        for (let element of elements) {
+          for (let button of buttons){
+            element["buttons"].push(button)
+
+          }
+        }
+        console.log(elements);
+        response = Response.genGenericList(elements)
         console.log(response);
         break;
 

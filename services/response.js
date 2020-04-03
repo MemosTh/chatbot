@@ -62,34 +62,20 @@ module.exports = class Response {
     };
     return response;
   }
-  static genGenericList(elements,buttons){
+  static genGenericList(elements){
+
+
     let response = {
       attachment: {
         type: "template",
         payload: {
           template_type: "generic",
-          elements: []
+          elements: elements
         }
       }
     };
 
-    for (let element of elements) {
-      response["elements"].push({
-        title: element["title"],
-        subtitle: element["subtitle"],
-        image_url: element["image_url"],
-        buttons: []
-      });
-    }
-
-    for (let button of buttons){
-      response["buttons"].push({
-        title:button["title"],
-        type:"button",
-        payload:button["payload"]
-
-      })
-    }
+   
 
     return response;
 
