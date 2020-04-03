@@ -55,15 +55,13 @@ module.exports = class Curation {
           {
           type: "postback",
           title: "view",
-          payload: "THIS_IS_TEST"
+          payload: "THIS_IS_TEST2"
     }
         ]
-
-        for (let element of elements) {
-          for (let button of buttons){
-            element["buttons"].push(button)
-
-          }
+        let count= 0;
+        for (let element of elements){
+            element["buttons"].push(buttons[count])
+            count++;
         }
         console.log(elements);
         response = Response.genGenericList(elements)

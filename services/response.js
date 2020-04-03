@@ -75,7 +75,7 @@ module.exports = class Response {
       }
     };
 
-   
+
 
     return response;
 
