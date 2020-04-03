@@ -147,16 +147,9 @@ module.exports = class Curation {
         // ]);
 
 
-        let buttons = [
-          {
+        let buttons = Response.genPostbackButton("Go","CURATION_FOR_ME")
 
-            type: "web_url",
-            url: "https://www.miele.gr/domestic/shop-2151.htm",
-            title: "view",
 
-          },
-
-        ];
         response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg', 'Επίσημη αντιπροσωπεία Miele', 'Καλώς ήλθατε στο e shop μας', buttons)
 
         break;
