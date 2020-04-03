@@ -38,7 +38,21 @@ module.exports = class Order {
         break;
 
       case "SEARCH_ORDER":
-        let button1 = Response.genWebUrlButton('trol','https://www.miele.gr/')
+        let button1 = [
+          {
+
+            type:"web_url",
+            url:"https://www.miele.gr/domestic/locations-447.htm",
+            title:"Track my trol"
+          },
+          {
+
+            type:"web_url",
+            url:"https://www.miele.gr/domestic/locations-447.htm",
+            title:"Track my trol"
+          }
+
+        ];
         response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_442_x/MIELE_GR.png','memos','this is trol',button1)
         break;
 
