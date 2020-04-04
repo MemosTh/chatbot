@@ -52,6 +52,7 @@ module.exports = class GraphAPi {
 
   static callMessengerProfileAPI(requestBody) {
     // Send the HTTP request to the Messenger Profile API
+    console.log(requestBody)
 
     console.log(`Setting Messenger Profile for app ${config.appId}`);
     request(
