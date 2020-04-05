@@ -116,16 +116,7 @@ module.exports = class Receive {
         ])
       ];
     }
-
-    let request_body = {
-      "recipient": {
-        "id": this.user.psid
-      },
-      "message": response
-    }
-    GraphAPi.callSendAPI(request_body)
-
-
+    return response;
   }
 
   // Handles mesage events with attachments
@@ -275,6 +266,8 @@ module.exports = class Receive {
       },
       message: response
     };
+
+    
 
     // Check if there is persona id in the response
     if ("persona_id" in response) {
