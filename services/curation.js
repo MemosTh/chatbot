@@ -134,7 +134,7 @@ module.exports = class Curation {
                 break;
 
             case "CURATION_COOK":
-                response = Response.genGenericMedia("video", `${config.appUrl}/video.mov`);
+                response = Response.GenericMedia("video", `${config.appUrl}/video.mov`);
                 break;
             case "CURATION_FRIDGE":
 
