@@ -71,7 +71,7 @@ module.exports = class Response {
   static genGenericVideo() {
     let response = {
       attachment: {
-        type: "video",
+        type: "template",
         payload: {
           template_type: "media",
           elements: [
