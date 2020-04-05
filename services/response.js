@@ -73,7 +73,13 @@ module.exports = class Response {
       attachment: {
         type: "video",
         payload: {
-          url: "https://mielechatbot.herokuapp.com/video.mov"
+          template_type: "media",
+          elements: [
+            {
+              media_type: "video",
+              url: "https://www.facebook.com/978507075568723/videos/444697962790622"
+            }
+          ]
         }
       }
     };

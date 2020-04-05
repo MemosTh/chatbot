@@ -267,7 +267,7 @@ module.exports = class Receive {
       message: response
     };
 
-    
+
 
     // Check if there is persona id in the response
     if ("persona_id" in response) {
