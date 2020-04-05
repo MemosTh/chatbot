@@ -35,7 +35,7 @@ module.exports = class Curation {
                 title: "Book Appointment",
             },
             {
-                type: "web_url",
+                type: "postback",
                 title: "View",
                 payload:""
             }
