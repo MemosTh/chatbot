@@ -35,12 +35,12 @@ module.exports = class Care {
       // let opt2 = Response.genText(i18n.__("care.opt2"));
 
         let opt1= Response.genImageTemplate(
-            `${config.appUrl}/order.png`,
+            `${config.appUrl}/image004.jpg`,
             i18n.__("care.opt1")
         );
         let or = Response.genText(i18n.__("care.or"));
         let opt2 = Response.genImageTemplate(
-            `${config.appUrl}/order.png`,
+            `${config.appUrl}/image005.jpg`,
             i18n.__("care.opt2")
         );
         let curation = Response.genQuickReply(i18n.__("care.help"), [
