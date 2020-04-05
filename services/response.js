@@ -89,6 +89,22 @@ module.exports = class Response {
     return response;
   }
 
+  static GenericMedia(media_type, url) {
+
+    let response = {
+      attachment: {
+        type: media_type,
+        payload: {
+          url: url
+        }
+      }
+    };
+
+
+
+    return response;
+  }
+
   static genImageTemplate(image_url, title, subtitle = "") {
     let response = {
       attachment: {

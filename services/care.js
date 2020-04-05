@@ -35,10 +35,10 @@ module.exports = class Care {
       // let opt2 = Response.genText(i18n.__("care.opt2"));
 
 
-        let image1 = Response.genGenericMedia('image',`${config.appUrl}/image004.jpg`);
+        let image1 = Response.GenericMedia('image',`${config.appUrl}/image004.jpg`);
         let opt1= Response.genText(i18n.__("care.opt1"));
         let or = Response.genText(i18n.__("care.or"));
-        let image2 = Response.genGenericMedia('image',`${config.appUrl}/image004.jpg`);
+        let image2 = Response.GenericMedia('image',`${config.appUrl}/image005.jpg`);
         let opt2 = Response.genText(i18n.__("care.opt2"));
         let curation = Response.genQuickReply(i18n.__("care.help"), [
 
