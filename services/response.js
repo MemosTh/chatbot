@@ -77,7 +77,7 @@ module.exports = class Response {
           elements: [
             {
               media_type: media_type,
-              url: url
+              attachment_id: '2801406636562254'
             }
           ]
         }
