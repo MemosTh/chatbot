@@ -81,37 +81,37 @@ module.exports = class Curation {
                     {
                         type: "postback",
                         title: "view",
-                        payload: "COOK"
+                        payload: "CURATION_COOK"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "FRIDGE"
+                        payload: "CURATION_FRIDGE"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "COFFEE"
+                        payload: "CURATION_COFFEE"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "WASHER"
+                        payload: "CURATION_WASHER"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "DRY"
+                        payload: "CURATION_DRY"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "IRON"
+                        payload: "CURATION_IRON"
                     },
                     {
                         type: "postback",
                         title: "view",
-                        payload: "BROOM"
+                        payload: "CURATION_BROOM"
                     },
 
                 ];
