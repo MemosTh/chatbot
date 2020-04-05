@@ -72,7 +72,7 @@ module.exports = class Response {
       attachment: {
         type: "template",
         payload: {
-          template_type: "media",
+          template_type: "generic",
           elements: [
             {
               media_type: media_type,
