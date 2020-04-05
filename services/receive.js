@@ -135,7 +135,7 @@ module.exports = class Receive {
     console.log("Received attachment:", `${ JSON.stringify(attachment)} for ${this.user.psid}`);
 
     if (jsonObject["type"]=="fallback") {
-      let message = Response.genText(i18n._("fallback.attachment"))
+      let message = Response.genText(i18n.__("fallback.attachment"))
       let curation = Response.genQuickReply(i18n.__("care.help"), [
 
         {

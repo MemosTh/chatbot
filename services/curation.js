@@ -23,7 +23,25 @@ module.exports = class Curation {
 
     handlePayload(payload) {
         let response;
-        let outfit;
+        let categoryButtons=[
+            {
+                type: "postback",
+                title: "Video call",
+                payload: "CURATION_VIDEOCALL",
+            },
+            {
+                type: "web_url",
+                url: "https://fb.com/book/104422437885616/",
+                title: "Book Appointment",
+            },
+            {
+                type: "web_url",
+                title: "View",
+                payload:""
+            }
+        ];
+
+
 
 
         switch (payload) {
@@ -134,7 +152,8 @@ module.exports = class Curation {
                 break;
 
             case "CURATION_COOK":
-                response = Response.GenericMedia("video", `${config.appUrl}/video.mov`);
+                categoryButtons[2].payload="CURATION_COOK";
+                response = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592",categoryButtons);
                 break;
             case "CURATION_FRIDGE":
 
