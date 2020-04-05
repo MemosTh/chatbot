@@ -131,21 +131,48 @@ module.exports = class Receive {
     let attachment = this.webhookEvent.message.attachments[0];
     attachment=JSON.stringify(attachment);
     let jsonObject = JSON.parse(attachment)
-    console.log("this is test")
 
-    console.log("this is second test" +jsonObject["type"])
     console.log("Received attachment:", `${ JSON.stringify(attachment)} for ${this.user.psid}`);
 
-    response = Response.genQuickReply(i18n.__("fallback.attachment"), [
-      {
-        title: i18n.__("menu.help"),
-        payload: "CARE_HELP"
-      },
-      {
-        title: i18n.__("menu.start_over"),
-        payload: "GET_STARTED"
-      }
-    ]);
+    if (jsonObject["type"]=="fallback") {
+      let message = Response.genText(i18n._("fallback.attachment"))
+      let curation = Response.genQuickReply(i18n.__("care.help"), [
+
+        {
+          title: i18n.__("menu.yes"),
+          payload: "CARE_HELP_YES"
+        },
+        {
+          title: i18n.__("menu.no"),
+          payload: "CARE_HELP_NO"
+        },
+      ]);
+      response =[message,curation]
+    }else{
+
+      response = [
+        Response.genText(
+            i18n.__("fallback.unknown", {
+              message: this.webhookEvent.message.text
+            })
+        ),
+        Response.genText(i18n.__("get_started.guidance")),
+        Response.genQuickReply(i18n.__("get_started.help"), [
+          {
+            title: i18n.__("menu.help"),
+            payload: "CARE_HELP"
+          },
+          {
+            title: i18n.__("menu.moreInfo"),
+            payload: "CURATION"
+          },
+          {
+            title: i18n.__("menu.shop"),
+            payload: "ESHOP"
+          },
+        ])
+      ];
+    }
 
     return response;
   }
