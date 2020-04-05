@@ -88,6 +88,27 @@ module.exports = class Response {
 
     return response;
   }
+  static GenericCallButton(text, number) {
+
+    let response = {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: text,
+          buttons:[
+            {
+              type:"phone_number",
+              title:"Call",
+              payload: number
+            }
+          ]
+        }
+      }
+    };
+
+    return response;
+  }
 
   static GenericMedia(media_type, url) {
 
@@ -99,8 +120,6 @@ module.exports = class Response {
         }
       }
     };
-
-
 
     return response;
   }
