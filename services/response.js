@@ -73,7 +73,7 @@ module.exports = class Response {
       attachment: {
         type: "video",
         payload: {
-          url: "${config.appUrl}/video.mov"
+          url: "https://mielechatbot.herokuapp.com/video.mov"
         }
       }
     };

@@ -117,7 +117,15 @@ module.exports = class Receive {
       ];
     }
 
-    return response;
+    let request_body = {
+      "recipient": {
+        "id": this.user.psid
+      },
+      "message": response
+    }
+    GraphAPi.callSendAPI(request_body)
+
+
   }
 
   // Handles mesage events with attachments
@@ -222,13 +230,7 @@ module.exports = class Receive {
         text: `This is a default postback message for payload: ${payload}!`
       };
     }
-    let request_body = {
-      "recipient": {
-        "id": this.user.psid
-      },
-      "message": response
-    }
-    GraphAPi.callSendAPI(request_body)
+
 
   return response;
   }
