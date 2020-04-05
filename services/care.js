@@ -34,15 +34,12 @@ module.exports = class Care {
       // let or = Response.genText(i18n.__("care.or"));
       // let opt2 = Response.genText(i18n.__("care.opt2"));
 
-        let opt1= Response.genImageTemplate(
-            `${config.appUrl}/image004.jpg`,
-            i18n.__("care.opt1")
-        );
+
+        let image1 = Response.genGenericMedia('image',`${config.appUrl}/image004.jpg`);
+        let opt1= Response.genText(i18n.__("care.opt1"));
         let or = Response.genText(i18n.__("care.or"));
-        let opt2 = Response.genImageTemplate(
-            `${config.appUrl}/image005.jpg`,
-            i18n.__("care.opt2")
-        );
+        let image2 = Response.genGenericMedia('image',`${config.appUrl}/image004.jpg`);
+        let opt2 = Response.genText(i18n.__("care.opt2"));
         let curation = Response.genQuickReply(i18n.__("care.help"), [
 
         {
@@ -54,7 +51,7 @@ module.exports = class Care {
           payload: "CARE_HELP_NO"
         },
       ]);
-      response = [opt1, or, opt2, curation]
+      response = [image1,opt1, or,image2, opt2, curation]
         break;
       case "CARE_HELP_YES":
         // Send using the Persona for order issues
