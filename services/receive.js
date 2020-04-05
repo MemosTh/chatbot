@@ -106,13 +106,17 @@ module.exports = class Receive {
         Response.genText(i18n.__("get_started.guidance")),
         Response.genQuickReply(i18n.__("get_started.help"), [
           {
-            title: i18n.__("menu.suggestion"),
+            title: i18n.__("menu.help"),
+            payload: "CARE_HELP"
+          },
+          {
+            title: i18n.__("menu.moreInfo"),
             payload: "CURATION"
           },
           {
-            title: i18n.__("menu.help"),
-            payload: "CARE_HELP"
-          }
+            title: i18n.__("menu.shop"),
+            payload: "ESHOP"
+          },
         ])
       ];
     }
@@ -182,12 +186,10 @@ module.exports = class Receive {
 
     // Set the response based on the payload
     if (
-      payload === "GET_STARTED" ||
-      payload === "DEVDOCS" ||
-      payload === "GITHUB"
+      payload === "GET_STARTED"
     ) {
       response = Response.genNuxMessage(this.user);
-    } else if (payload.includes("CURATION") || payload.includes("COUPON")) {
+    } else if (payload.includes("CURATION") ) {
       let curation = new Curation(this.user, this.webhookEvent);
       response = curation.handlePayload(payload);
     } else if (payload.includes("CARE")) {
@@ -197,31 +199,13 @@ module.exports = class Receive {
       response = Order.handlePayload(payload);
     } else if (payload.includes("CSAT")) {
       response = Survey.handlePayload(payload);
-    } else if (payload.includes("CHAT-PLUGIN")) {
-      response = [
-        Response.genText(i18n.__("chat_plugin.prompt")),
-        Response.genText(i18n.__("get_started.guidance")),
-        Response.genQuickReply(i18n.__("get_started.help"), [
-          {
-            title: i18n.__("care.order"),
-            payload: "CARE_ORDER"
-          },
-          {
-            title: i18n.__("care.billing"),
-            payload: "CARE_BILLING"
-          },
-          {
-            title: i18n.__("care.other"),
-            payload: "CARE_OTHER"
-          }
-        ])
-      ];
-    } else {
-      response = {
-        text: `This is a default postback message for payload: ${payload}!`
-      };
     }
-
+    else
+      {
+        response = {
+          text: `This is a default postback message for payload: ${payload}!`
+        };
+      }
 
   return response;
   }

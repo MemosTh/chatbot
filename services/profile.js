@@ -30,7 +30,7 @@ module.exports = class Profile {
   setThread() {
     let profilePayload = {
       ...this.getGetStarted(),
-      // ...this.getGreeting(),
+      ...this.getGreeting(),
       ...this.getPersistentMenu()
     };
 
@@ -153,23 +153,12 @@ module.exports = class Profile {
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: i18n.__("menu.support"),
-          type: "nested",
-          call_to_actions: [
-            {
-              title: i18n.__("menu.order"),
-              type: "postback",
-              payload: "TRACK_ORDER"
-            },
-            {
-              title: i18n.__("menu.help"),
-              type: "postback",
-              payload: "CARE_HELP"
-            }
-          ]
+          title: i18n.__("menu.help"),
+          type: "postback",
+          payload: "CARE_HELP"
         },
         {
-          title: i18n.__("menu.suggestion"),
+          title: i18n.__("menu.moreInfo"),
           type: "postback",
           payload: "CURATION"
         },
