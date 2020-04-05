@@ -25,6 +25,7 @@ module.exports = class Curation {
         let response;
         let outfit;
 
+
         switch (payload) {
 
             case "CURATION":
@@ -133,9 +134,10 @@ module.exports = class Curation {
                 break;
 
             case "CURATION_COOK":
-                response = Response.genGenericVideo();
+                response = Response.genGenericMedia("video", `${config.appUrl}/video.mov`);
                 break;
             case "CURATION_FRIDGE":
+
                 break;
             case "CURATION_COFFEE":
                 break;

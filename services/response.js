@@ -68,7 +68,7 @@ module.exports = class Response {
 
   }
 
-  static genGenericVideo() {
+  static genGenericMedia(media_type, url) {
     let response = {
       attachment: {
         type: "template",
@@ -76,8 +76,8 @@ module.exports = class Response {
           template_type: "media",
           elements: [
             {
-              media_type: "video",
-              url: "https://www.facebook.com/978507075568723/videos/444697962790622"
+              media_type: media_type,
+              url: url
             }
           ]
         }
