@@ -77,7 +77,7 @@ module.exports = class Response {
           elements: [
             {
               media_type: "video",
-              url:"https://www.facebook.com/Miele.Hellas/posts/2854297454656333"
+              url: '${config.appUrl}/video.mov'
             }
           ]
         }

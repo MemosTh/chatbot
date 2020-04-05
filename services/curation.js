@@ -132,20 +132,20 @@ module.exports = class Curation {
                 response= [message, list];
                 break;
 
-            case "COOK":
-                response = Response.genText("Ποια κατηγορία σας ενδιαφέρει;");
+            case "CURATION_COOK":
+                response = Response.genGenericVideo();
                 break;
-            case "FRIDGE":
+            case "CURATION_FRIDGE":
                 break;
-            case "COFFEE":
+            case "CURATION_COFFEE":
                 break;
-            case "WASHER":
+            case "CURATION_WASHER":
                 break;
-            case "DRY":
+            case "CURATION_DRY":
                 break;
-            case "IRON":
+            case "CURATION_IRON":
                 break;
-            case "BROOM":
+            case "CURATION_BROOM":
                 break;
         }
 
