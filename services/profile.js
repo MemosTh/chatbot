@@ -30,7 +30,7 @@ module.exports = class Profile {
   setThread() {
     let profilePayload = {
       ...this.getGetStarted(),
-      ...this.getGreeting(),
+      // ...this.getGreeting(),
       ...this.getPersistentMenu()
     };
 

@@ -32,8 +32,8 @@ module.exports = class Curation {
         let elements = [
           {
             image_url:'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
-            title:"Επίσημη αντιπροσωπεία Miele",
-            subtitle:"τεστ",
+            title:"Μαγείρεμα",
+            subtitle:"",
             buttons:[]
           },
           {
@@ -63,14 +63,16 @@ module.exports = class Curation {
             element["buttons"].push(buttons[count])
             count++;
         }
+
         console.log(elements);
+
         response = Response.genGenericList(elements)
         console.log(response);
         break;
 
     }
-
-    return response;
+      let message = Response.genText("Ποια κατηγορία σας ενδιαφέρει;")
+    return [message, response];
   }
 
 
