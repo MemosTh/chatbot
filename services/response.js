@@ -69,8 +69,7 @@ module.exports = class Response {
           elements: [
             {
               media_type: media_type,
-              url: url,
-              buttons:buttons
+              url: url
             }
           ]
         }

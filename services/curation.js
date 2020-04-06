@@ -154,10 +154,26 @@ module.exports = class Curation {
             case "CURATION_COOK":
 
                 categoryButtons[2].payload="CURATION_COOK_VIEW";
-                response = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592",categoryButtons);
+                let video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                let opts = Response.genQuickReply("",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_COOK_VIEW"
+                    }
+                ]);
                 break;
             case "CURATION_FRIDGE":
-
                 break;
             case "CURATION_COFFEE":
                 break;
@@ -226,7 +242,7 @@ module.exports = class Curation {
                         }
                     },
                 ]
-                
+
 
                 response = Response.genGenericTemplate(elementCook)
                 break
