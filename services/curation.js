@@ -178,7 +178,7 @@ module.exports = class Curation {
                 //     },
                 //
                 // ]
-                let buttonc = []
+                let buttonc = [{}]
 
                 response = Response.genGenericTemplate("https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg"," Ψήσιμο & μαγείρεμα στον ατμό","",buttonc,"https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm")
                 break
