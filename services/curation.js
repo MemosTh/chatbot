@@ -152,7 +152,7 @@ module.exports = class Curation {
                 break;
 
             case "CURATION_COOK":
-                categoryButtons[2].payload="CURATION_COOK";
+                categoryButtons[2].payload="CURATION_COOK_VIEW";
                 response = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592",categoryButtons);
                 break;
             case "CURATION_FRIDGE":
@@ -168,6 +168,32 @@ module.exports = class Curation {
                 break;
             case "CURATION_BROOM":
                 break;
+            case "CURATION_COOK_VIEW":
+                let buttonc = [
+
+                    {
+                        type: "web_url",
+                        url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
+                        title: "VIEW",
+                    },
+
+                ]
+
+                response = Response.genGenericTemplate("https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg"," Ψήσιμο & μαγείρεμα στον ατμό","",buttonc,"https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm")
+                break
+            case "CURATION_FRIDGE_VIEW":
+                break;
+            case "CURATION_COFFEE_VIEW":
+                break;
+            case "CURATION_WASHER_VIEW":
+                break;
+            case "CURATION_DRY_VIEW":
+                break;
+            case "CURATION_IRON_VIEW":
+                break;
+            case "CURATION_BROOM_VIEW":
+                break;
+
         }
 
         return response;
