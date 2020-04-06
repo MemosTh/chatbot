@@ -185,7 +185,7 @@ module.exports = class Curation {
 
                     ]
 
-                response=Response.GenericMedia(video,`${config.appUrl}/video.mov`,buttonc)
+                response=Response.GenericMedia("video",`${config.appUrl}/video.mov`,buttonc)
                 break;
             case "CURATION_COFFEE":
                 break;
