@@ -30,25 +30,13 @@ module.exports = class Response {
     return response;
   }
 
-  static genGenericTemplate(image_url, title, subtitle, buttons,url) {
+  static genGenericTemplate(elements) {
     let response = {
       attachment: {
         type: "template",
         payload: {
           template_type: "generic",
-          elements: [
-            {
-              title: title,
-              subtitle: subtitle,
-              image_url: image_url,
-              default_action: {
-                type: "web_url",
-                url : url,
-                webview_height_ratio: "full",
-              },
-              buttons: buttons
-            }
-          ]
+          elements: elements
         }
       }
     };

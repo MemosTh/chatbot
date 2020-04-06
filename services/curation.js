@@ -152,6 +152,7 @@ module.exports = class Curation {
                 break;
 
             case "CURATION_COOK":
+
                 categoryButtons[2].payload="CURATION_COOK_VIEW";
                 response = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592",categoryButtons);
                 break;
@@ -178,9 +179,56 @@ module.exports = class Curation {
                 //     },
                 //
                 // ]
-                let buttonc = [{}]
+                let elementCook =[
+                    {
+                        title: "Ψήσιμο & μαγείρεμα στον ατμό",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Εστίες & Combi sets",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/layout/products/20000154479.png",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/hobs-and-combination-sets-1492.htm ",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Απορροφητήρες",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/layout/products/20000153867.png",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/cooker-hoods-1638.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Θερμοθάλαμοι",
+                        image_url: "https://www.miele.gr/pmedia/06/Z13/20000154132-000-00_20000154132.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/product-selection-drawers-1489.htm?shop=1#7",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Θάλαμοι σφράγισης κενού",
+                        image_url: "https://www.miele.gr/pmedia/06/Z13/20000154259-000-00_20000154259.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/vacuum-seiling-drawer-2977.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                ]
+                
 
-                response = Response.genGenericTemplate("https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg"," Ψήσιμο & μαγείρεμα στον ατμό","",buttonc,"https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm")
+                response = Response.genGenericTemplate(elementCook)
                 break
             case "CURATION_FRIDGE_VIEW":
                 break;
