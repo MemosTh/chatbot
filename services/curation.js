@@ -56,37 +56,37 @@ module.exports = class Curation {
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/Kuehl-Gefrier-und-Weinschraenke.jpg',
                         title: "Συσκευές Ψύξης & Συντηρητές Κρασιών ",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/20000156541.png',
                         title: "Καφετιέρες",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/20000149095.png',
                         title: "Πλυντήρια πιάτων & ρούχων ",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/pmedia/06/Z13/20000148507-000-00_20000148507.jpg',
                         title: "Στεγνωτήρια",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/pmedia/18/Z13/20000162768-000-00_20000162768.jpg',
                         title: "Συσκευές Σιδερώματος",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/Staubsauger-big.jpg',
                         title: "Ηλεκτρικές σκούπες",
                         subtitle: "",
                         buttons: []
@@ -154,8 +154,8 @@ module.exports = class Curation {
             case "CURATION_COOK":
 
                 categoryButtons[2].payload="CURATION_COOK_VIEW";
-                let video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
-                let opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
                     {
 
                         title: "Video call",
@@ -175,27 +175,131 @@ module.exports = class Curation {
                 response=[video,opts];
                 break;
             case "CURATION_FRIDGE":
-                let buttonc = [
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
 
-                        {
-                            type: "web_url",
-                            url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
-                            title: "VIEW",
-                        },
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
 
-                    ]
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_FRIDGE_VIEW"
+                    }
+                ]);
+                response=[video,opts];
 
-                response=Response.GenericMedia("video",`${config.appUrl}/video.mov`,buttonc)
                 break;
             case "CURATION_COFFEE":
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_COFFEE_VIEW"
+                    }
+                ]);
+                response=[video,opts];
                 break;
             case "CURATION_WASHER":
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_WASHER_VIEW"
+                    }
+                ]);
+                response=[video,opts];
                 break;
             case "CURATION_DRY":
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_DRY_VIEW"
+                    }
+                ]);
+                response=[video,opts];
                 break;
             case "CURATION_IRON":
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_IRON_VIEW"
+                    }
+                ]);
+                response=[video,opts];
                 break;
             case "CURATION_BROOM":
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
+                var opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
+                    {
+
+                        title: "Video call",
+                        payload: "CURATION_VIDEOCALL",
+                    },
+                    {
+
+                        title: "Book Appointment",
+                        payload:"CURATION_APPOINTMENT"
+                    },
+                    {
+                        type: "postback",
+                        title: "View",
+                        payload:"CURATION_BROOM_VIEW"
+                    }
+                ]);
+                response=[video,opts];
                 break;
             case "CURATION_COOK_VIEW":
                 // let buttonc = [
