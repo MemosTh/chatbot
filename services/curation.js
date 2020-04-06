@@ -169,15 +169,15 @@ module.exports = class Curation {
             case "CURATION_BROOM":
                 break;
             case "CURATION_COOK_VIEW":
-                let buttonc = [
-
-                    {
-                        type: "web_url",
-                        url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
-                        title: "VIEW",
-                    },
-
-                ]
+                // let buttonc = [
+                //
+                //     {
+                //         type: "web_url",
+                //         url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
+                //         title: "VIEW",
+                //     },
+                //
+                // ]
 
                 response = Response.genGenericTemplate("https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg"," Ψήσιμο & μαγείρεμα στον ατμό","",buttonc,"https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm")
                 break
