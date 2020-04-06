@@ -155,7 +155,7 @@ module.exports = class Curation {
 
                 categoryButtons[2].payload="CURATION_COOK_VIEW";
                 let video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
-                let opts = Response.genQuickReply("",[
+                let opts = Response.genQuickReply("Διαλέξτε μια απο τις παρακάτω επιλογές",[
                     {
 
                         title: "Video call",
