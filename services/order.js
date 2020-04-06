@@ -30,7 +30,23 @@ module.exports = class Order {
           }
 
         ];
-        response = Response.genGenericTemplate('https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg', 'Επίσημη αντιπροσωπεία Miele', 'Καλώς ήλθατε στο e shop μας', button1)
+
+        var element =[
+
+          {
+            title: "Επίσημη αντιπροσωπεία Miele",
+            subtitle:"Καλώς ήλθατε στο e shop μας",
+            image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg",
+            default_action: {
+              type: "web_url",
+              url : "https://www.miele.gr/domestic/shop-2151.htm",
+              webview_height_ratio: "full",
+            },
+            buttons:button1
+          },
+          
+        ]
+        response = Response.genGenericTemplate(element)
     }
     return response;
   }
