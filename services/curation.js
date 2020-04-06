@@ -50,7 +50,7 @@ module.exports = class Curation {
 
                 let elements = [
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg',
+                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg',
                         title: "Μαγείρεμα",
                         subtitle: "",
                         buttons: []
@@ -363,10 +363,104 @@ module.exports = class Curation {
                 response = Response.genGenericTemplate(elementCook);
                 break;
             case "CURATION_FRIDGE_VIEW":
+                let elementFridge =[
+                    {
+                        title: "Ψυγεία",
+                        image_url: "https://www.miele.gr/pmedia/25/Z13/20000143044-000-00_20000143044.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/refrigerators-1720.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Ψυγειοκαταψύκτες",
+                        image_url: "https://www.miele.gr/pmedia/06/Z13/20000142379-000-00_20000142379.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/Fridge-freezers-1728.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Καταψύκτες ",
+                        image_url: "https://www.miele.gr/pmedia/06/Z05/20000150483-000-00_20000150483.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/freezers-and-chest-freezers-1737.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Συντηρητές κρασιών",
+                        image_url: "https://www.miele.gr/pmedia/06/Z13/20000100729-000-00_20000100729.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/wine-units-1746.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+
+                ]
+
+                response = Response.genGenericTemplate(elementFridge);
                 break;
             case "CURATION_COFFEE_VIEW":
+                let elementCoffee =[
+                    {
+                        title: "Eντοιχιζόμενες καφετιέρες",
+                        image_url: "https://www.miele.gr/pmedia/06/Z05/20000160029-000-00_20000160029.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/built-in-coffee-machines-1760.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Ελευθερες καφετιέρες",
+                        image_url: "https://www.miele.gr/pmedia/25/Z13/20000138860-000-00_20000138860.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/countertop-coffee-machines-1769.htm",
+                            webview_height_ratio: "full",
+                        }
+                    }
+                ]
+
+                response = Response.genGenericTemplate(elementCoffee);
                 break;
             case "CURATION_WASHER_VIEW":
+                let elementWasher =[
+                    {
+                        title: "Πλυντήρια πιάτων",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/layout/products/20000149095.png",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/dishwashers-1529.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Πλυντήρια ρούχων",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/layout/products/Waschmaschinen-Trockner-Buegelgeraete_158653_Zuschnitt.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/washing-machines-1561.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                    {
+                        title: "Πλυντοστεγνωστήρια",
+                        image_url: "https://www.miele.gr/pmedia/25/Z13/20000148514-000-00_20000148514.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/domestic/washer-dryers-1580.htm",
+                            webview_height_ratio: "full",
+                        }
+                    },
+                ]
+
+                response = Response.genGenericTemplate(elementCoffee);
                 break;
             case "CURATION_DRY_VIEW":
                 break;
@@ -374,6 +468,9 @@ module.exports = class Curation {
                 break;
             case "CURATION_BROOM_VIEW":
                 break;
+            case "CURATION_APPOINTMENT":
+                window.location.replace("https://fb.com/book/104422437885616/");
+                break
 
         }
 
