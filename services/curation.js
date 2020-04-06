@@ -31,7 +31,7 @@ module.exports = class Curation {
             },
             {
                 type: "web_url",
-                url: "https://fb.com/book/104422437885616/",
+                url: "https://www.facebook.com/Test_miele_bot-104422437885616/services/?show_upsell=1",
                 title: "Book Appointment",
             },
             {
