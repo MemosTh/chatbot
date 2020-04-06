@@ -169,7 +169,7 @@ module.exports = class Curation {
                 ]);
                 var or =Response.genText(" Ή ")
                 var appointment = Response.genWebUrlButton("Κλείστε ραντεβού","Ραντεβού","https://fb.com/book/104422437885616/")
-                response=[video,opts,or,appointment];
+                response=[video,appointment,or,opts];
                 break;
             case "CURATION_FRIDGE":
                 var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
