@@ -172,6 +172,7 @@ module.exports = class Curation {
                         payload:"CURATION_COOK_VIEW"
                     }
                 ]);
+                response=[video,opts];
                 break;
             case "CURATION_FRIDGE":
                 break;
@@ -244,8 +245,8 @@ module.exports = class Curation {
                 ]
 
 
-                response = Response.genGenericTemplate(elementCook)
-                break
+                response = Response.genGenericTemplate(elementCook);
+                break;
             case "CURATION_FRIDGE_VIEW":
                 break;
             case "CURATION_COFFEE_VIEW":
