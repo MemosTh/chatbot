@@ -179,15 +179,33 @@ module.exports = class Response {
     return response;
   }
 
-  static genWebUrlButton(title, url) {
+  static genWebUrlButton(title,btnName,url) {
+    // let response = {
+    //   type: "web_url",
+    //   title: title,
+    //   url: url,
+    //   messenger_extensions: true
+    // };
+
     let response = {
-      type: "web_url",
-      title: title,
-      url: url,
-      messenger_extensions: true
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: title,
+          buttons:[
+            {
+              type:"web_url",
+              title:btnName,
+              url: url
+            }
+          ]
+        }
+      }
     };
 
     return response;
+
   }
 
   static genNuxMessage(user) {

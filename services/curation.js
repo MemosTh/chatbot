@@ -162,17 +162,14 @@ module.exports = class Curation {
                         payload: "CURATION_VIDEOCALL",
                     },
                     {
-
-                        title: "Book Appointment",
-                        payload:"CURATION_APPOINTMENT"
-                    },
-                    {
                         type: "postback",
                         title: "View",
                         payload:"CURATION_COOK_VIEW"
                     }
                 ]);
-                response=[video,opts];
+                var or =Response.genText(" Ή ")
+                var appointment = Response.genWebUrlButton("Κλείστε ραντεβού","Ραντεβού","https://fb.com/book/104422437885616/")
+                response=[video,opts,or,appointment];
                 break;
             case "CURATION_FRIDGE":
                 var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
@@ -469,7 +466,6 @@ module.exports = class Curation {
             case "CURATION_BROOM_VIEW":
                 break;
             case "CURATION_APPOINTMENT":
-                window.location.replace("https://fb.com/book/104422437885616/");
                 break
 
         }
