@@ -102,13 +102,14 @@ module.exports = class Response {
     return response;
   }
 
-  static GenericMedia(media_type, url) {
+  static GenericMedia(media_type, url,buttons) {
 
     let response = {
       attachment: {
         type: media_type,
         payload: {
-          url: url
+          url: url,
+          buttons:buttons
         }
       }
     };

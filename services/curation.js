@@ -175,6 +175,17 @@ module.exports = class Curation {
                 response=[video,opts];
                 break;
             case "CURATION_FRIDGE":
+                let buttonc = [
+
+                        {
+                            type: "web_url",
+                            url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
+                            title: "VIEW",
+                        },
+
+                    ]
+
+                response=Response.GenericMedia(video,"https://www.facebook.com/978507075568723/videos/311974243094592",buttonc)
                 break;
             case "CURATION_COFFEE":
                 break;
