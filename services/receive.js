@@ -61,7 +61,7 @@ module.exports = class Receive {
     if (Array.isArray(responses)) {
       let delay = 0;
       for (let response of responses) {
-        this.sendMessage(response,  delay * 500);
+        this.sendMessage(response,  delay * 1000);
         delay++;
       }
     } else {
