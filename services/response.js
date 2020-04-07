@@ -169,20 +169,15 @@ module.exports = class Response {
     return response;
   }
 
-  static genPostbackButton(title,btnName, payload) {
+  static genPostbackButton(title,buttons) {
     let response = {
       attachment: {
         type: "template",
         payload: {
           template_type: "button",
           text: title,
-          buttons:[
-            {
-              type:"postback",
-              title:btnName,
-              payload: payload
-            }
-          ]
+          buttons:buttons
+
         }
       }
     };
