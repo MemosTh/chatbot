@@ -91,7 +91,7 @@ module.exports = class Response {
           buttons:[
             {
               type:"phone_number",
-              title:"Call",
+              title:"Κλήση",
               payload: number
             }
           ]
@@ -169,12 +169,23 @@ module.exports = class Response {
     return response;
   }
 
-  static genPostbackButton(title, payload) {
-    let response = [{
-      type: "postback",
-      title: title,
-      payload: payload
-    }];
+  static genPostbackButton(title,btnName, payload) {
+    let response = {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "button",
+          text: title,
+          buttons:[
+            {
+              type:"postback",
+              title:btnName,
+              payload: payload
+            }
+          ]
+        }
+      }
+    };
 
     return response;
   }
