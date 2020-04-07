@@ -168,9 +168,9 @@ module.exports = class Curation {
                     }
                 ]);
                 var or =Response.genText(" Ή ")
-                var appointment = Response.genWebUrlButton("Κλείστε ραντεβού","Ραντεβου","https://fb.com/book/104422437885616/");
-                var videocall = Response.GenericCallButton("Βίντεο κλήση","+306974850525")
-                var viewButton = Response.genPostbackButton("Δές τις υποκατηγορίες","Δeς","CURATION_COOK_VIEW")
+                var appointment = Response.genWebUrlButton("Κλείστε ραντεβού"," ","https://fb.com/book/104422437885616/");
+                var videocall = Response.GenericCallButton(" ","+306974850525")
+                var viewButton = Response.genPostbackButton(" ","Δeς","CURATION_COOK_VIEW")
                 response=[video,appointment,videocall,viewButton];
                 break;
             case "CURATION_FRIDGE":

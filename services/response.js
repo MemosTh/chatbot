@@ -87,6 +87,7 @@ module.exports = class Response {
         type: "template",
         payload: {
           template_type: "button",
+          text: text,
           buttons:[
             {
               type:"phone_number",
@@ -174,7 +175,7 @@ module.exports = class Response {
         type: "template",
         payload: {
           template_type: "button",
-          
+          text: title,
           buttons:[
             {
               type:"postback",
@@ -202,6 +203,7 @@ module.exports = class Response {
         type: "template",
         payload: {
           template_type: "button",
+          text: title,
           buttons:[
             {
               type:"web_url",
