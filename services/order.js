@@ -44,7 +44,7 @@ module.exports = class Order {
             },
             buttons:button1
           },
-          
+
         ]
         response = Response.genGenericTemplate(element)
     }

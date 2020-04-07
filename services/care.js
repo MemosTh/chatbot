@@ -12,7 +12,6 @@
 
 // Imports dependencies
 const Response = require("./response"),
-  Survey = require("./survey"),
   config = require("./config"),
   i18n = require("../i18n.config");
 
