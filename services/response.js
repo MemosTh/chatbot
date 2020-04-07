@@ -91,7 +91,7 @@ module.exports = class Response {
           buttons:[
             {
               type:"phone_number",
-              title:"Κλήση",
+              title:"Κληση",
               payload: number
             }
           ]
