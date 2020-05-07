@@ -100,7 +100,7 @@ module.exports = class Curation {
                     {
                         type: "phone_number",
                         title: "view",
-                        payload: "6979997478"
+                        payload: "+306979997478"
                     },
                     {
                         type: "postback",
