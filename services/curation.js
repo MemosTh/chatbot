@@ -50,9 +50,9 @@ module.exports = class Curation {
 
                 let elements = [
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/2_160397_268x238.jpg',
-                        title: "Μαγείρεμα",
-                        subtitle: "",
+                        image_url: `${config.appUrl}/image004.jpg`,
+                        title: "Μπορείτε να μας καλέστε στα τηλέφωνα 801 222 4444 & +30 210 67 94 444",
+                        subtitle: "Δευτέρα έως Παρασκευή 09:00 – 17:00",
                         buttons: []
                     },
                     {
@@ -99,7 +99,7 @@ module.exports = class Curation {
                 let buttons = [
                     {
                         type: "phone_number",
-                        title: "view",
+                        title: "Κλήση",
                         payload: "+306979997478"
                     },
                     {
