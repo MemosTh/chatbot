@@ -98,9 +98,9 @@ module.exports = class Curation {
 
                 let buttons = [
                     {
-                        type: "postback",
+                        type: "phone_number",
                         title: "view",
-                        payload: "CURATION_COOK"
+                        payload: "6979997478"
                     },
                     {
                         type: "postback",
