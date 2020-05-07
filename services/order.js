@@ -39,7 +39,7 @@ module.exports = class Order {
             image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg",
             default_action: {
               type: "web_url",
-              url : "https://www.miele.gr/domestic/shop-2151.htm",
+              url : "https://www.google.com/search?sxsrf=ALeKk03TdaoFAoycJW0WucjdrW6agd6maw:1588849668641&q=miele+service+greece&npsic=0&rflfq=1&rlha=0&rllag=38026745,23773810,6440&tbm=lcl&ved=2ahUKEwiO5-agzqHpAhWJxYUKHfQeAVAQjGp6BAgLEDQ&tbs=lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u16!2m2!16m1!1e1!1m4!1u16!2m2!16m1!1e2!2m1!1e16!2m1!1e3!3sIAE,lf:1,lf_ui:4&rldoc=1#rlfi=hd:;si:;mv:[[42.73397854082312,34.90618672128997],[32.993780256537484,12.494077346289968],null,[38.02546067080482,23.700132033789966],6]",
               webview_height_ratio: "full",
             },
             buttons:button1
