@@ -50,9 +50,13 @@ module.exports = class Curation {
 
                 let elements = [
                     {
-                        image_url: `${config.appUrl}/image004.jpg`,
-                        title: "Μπορείτε να μας καλέστε στα τηλέφωνα 801 222 4444 & +30 210 67 94 444",
-                        subtitle: "Δευτέρα έως Παρασκευή 09:00 – 17:00",
+                        image_url:'https://www.miele.gr/pmedia/25/Z15/20000159710-000-00_20000159710.jpg',
+                        title: "Μαγείρεμα",
+                        subtitle: "",
+                        default_action: {
+                          type: "postback",
+                          payload: "CURATION_COOK",
+                        },
                         buttons: []
                     },
                     {
