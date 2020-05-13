@@ -53,10 +53,6 @@ module.exports = class Curation {
                         image_url:'https://www.miele.gr/pmedia/25/Z15/20000159710-000-00_20000159710.jpg',
                         title: "Μαγείρεμα",
                         subtitle: "",
-                        default_action: {
-                          type: "postback",
-                          payload: "CURATION_COOK",
-                        },
                         buttons: []
                     },
                     {
