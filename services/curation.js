@@ -99,7 +99,7 @@ module.exports = class Curation {
                 let buttons = [
                     {
                         type: "postback",
-                        title: "this is a test off how mach characters we have here",
+                        title: "Θελω να μαθω περισσοτερα",
                         payload: "CURATION_COOK"
                     },
                     {
