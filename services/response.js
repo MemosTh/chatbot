@@ -223,21 +223,40 @@ module.exports = class Response {
 
     let guide = this.genText(i18n.__("get_started.guidance"));
 
-    let curation = this.genQuickReply(i18n.__("get_started.help"), [
+    // let curation = this.genQuickReply(i18n.__("get_started.help"), [
+    //
+    //   {
+    //     title: i18n.__("menu.help"),
+    //     payload: "CARE_HELP"
+    //   },
+    //   {
+    //     title: i18n.__("menu.moreInfo"),
+    //     payload: "CURATION"
+    //   },
+    //   {
+    //     title: i18n.__("menu.shop"),
+    //     payload: "ESHOP"
+    //   },
+    // ]);
+
+    let curation = this.genPostbackButton(i18n.__("get_started.help"), [
 
       {
+        type: "postback",
         title: i18n.__("menu.help"),
         payload: "CARE_HELP"
       },
       {
+        type: "postback",
         title: i18n.__("menu.moreInfo"),
         payload: "CURATION"
       },
       {
+        type: "postback",
         title: i18n.__("menu.shop"),
         payload: "ESHOP"
       },
-    ]);
+    ])
 
     return [welcome, guide, curation];
   }
