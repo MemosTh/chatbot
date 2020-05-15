@@ -10,7 +10,9 @@
 
 "use strict";
 
-const i18n = require("../i18n.config");
+const Response = require("./response"),
+    config = require("./config"),
+    i18n = require("../i18n.config");
 
 module.exports = class Response {
   static genQuickReply(text, quickReplies) {
