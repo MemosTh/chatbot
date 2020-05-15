@@ -171,7 +171,7 @@ module.exports = class Curation {
                 var appointment = Response.genWebUrlButton("Κλείστε ραντεβού"," ","https://fb.com/book/104422437885616/");
                 var videocall = Response.GenericCallButton(" ","+306974850525")
                 var viewButton = Response.genPostbackButton("Επιλεξτε",categoryButtons)
-                response=[video,appointment,videocall,viewButton];
+                response=[video,viewButton];
                 break;
             case "CURATION_FRIDGE":
                 var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
@@ -359,7 +359,21 @@ module.exports = class Curation {
                 ]
 
 
-                response = Response.genGenericTemplate(elementCook);
+                 var carousel = Response.genGenericTemplate(elementCook);
+                let curation = Response.genQuickReply(i18n.__("care.help"), [
+
+                    {
+                        title: i18n.__("menu.yes"),
+                        payload: "CARE_HELP_YES"
+                    },
+                    {
+                        title: i18n.__("menu.no"),
+                        payload: "CARE_HELP_NO"
+                    },
+                ]);
+
+                response =[carousel,curation]
+
                 break;
             case "CURATION_FRIDGE_VIEW":
                 let elementFridge =[
@@ -403,6 +417,7 @@ module.exports = class Curation {
                 ]
 
                 response = Response.genGenericTemplate(elementFridge);
+
                 break;
             case "CURATION_COFFEE_VIEW":
                 let elementCoffee =[
