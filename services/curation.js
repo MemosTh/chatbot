@@ -169,7 +169,7 @@ module.exports = class Curation {
                 ]);
 
                 var viewButton = Response.genPostbackButton("Επιλεξτε",categoryButtons)
-                var curation = Response.genQuickReply(i18n.__("care.help"), [
+                var curationTest = Response.genQuickReply(i18n.__("care.help"), [
 
                     {
                         title: i18n.__("menu.yes"),
@@ -180,7 +180,7 @@ module.exports = class Curation {
                         payload: "CARE_HELP_NO"
                     },
                 ]);
-                response=[video,viewButton,curation];
+                response=[video,viewButton,curationTest];
                 break;
             case "CURATION_FRIDGE":
                 var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
