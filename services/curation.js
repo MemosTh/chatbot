@@ -167,11 +167,20 @@ module.exports = class Curation {
                         payload:"CURATION_COOK_VIEW"
                     }
                 ]);
-                var or =Response.genText(" Ή ")
-                var appointment = Response.genWebUrlButton("Κλείστε ραντεβού"," ","https://fb.com/book/104422437885616/");
-                var videocall = Response.GenericCallButton(" ","+306974850525")
+
                 var viewButton = Response.genPostbackButton("Επιλεξτε",categoryButtons)
-                response=[video,viewButton];
+                var curation = Response.genQuickReply(i18n.__("care.help"), [
+
+                    {
+                        title: i18n.__("menu.yes"),
+                        payload: "CARE_HELP_YES"
+                    },
+                    {
+                        title: i18n.__("menu.no"),
+                        payload: "CARE_HELP_NO"
+                    },
+                ]);
+                response=[video,viewButton,curation];
                 break;
             case "CURATION_FRIDGE":
                 var video = Response.genGenericMedia("video", "https://www.facebook.com/978507075568723/videos/311974243094592");
