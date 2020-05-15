@@ -50,26 +50,26 @@ module.exports = class Curation {
 
                 let elements = [
                     {
-                        image_url:`${config.appUrl}/cook.jpg`,
-                        title: "Μαγείρεμα",
+                        image_url:`${config.appUrl}/mieleBots500x260px.jpg`,
+                        title: "mieleBots500x260px",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/Kuehl-Gefrier-und-Weinschraenke.jpg',
-                        title: "Συσκευές Ψύξης & Συντηρητές Κρασιών ",
+                        image_url: `${config.appUrl}/mieleBots596x335px.jpg`,
+                        title: "mieleBots596x335px ",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/20000156541.png',
-                        title: "Καφετιέρες",
+                        image_url: `${config.appUrl}/mieleBots780x410px.jpg`,
+                        title: "mieleBots780x410px",
                         subtitle: "",
                         buttons: []
                     },
                     {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/20000149095.png',
-                        title: "Πλυντήρια πιάτων & ρούχων ",
+                        image_url: `${config.appUrl}/mieleBots1000x520px.jpg`,
+                        title: "mieleBots1000x520px",
                         subtitle: "",
                         buttons: []
                     },
