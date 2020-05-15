@@ -308,6 +308,7 @@ module.exports = class Response {
     //     payload: "ESHOP"
     //   },
     // ])
+    let curation = Response.genGenericList(elements);
 
     return [welcome, guide, curation];
   }
