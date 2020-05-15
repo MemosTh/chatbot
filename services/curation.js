@@ -50,7 +50,7 @@ module.exports = class Curation {
 
                 let elements = [
                     {
-                        image_url:'https://www.miele.gr/pmedia/25/Z15/20000159710-000-00_20000159710.jpg',
+                        image_url:`${config.appUrl}/image004.jpg`,
                         title: "Μαγείρεμα",
                         subtitle: "",
                         buttons: []
