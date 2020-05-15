@@ -223,29 +223,70 @@ module.exports = class Response {
 
     let guide = this.genText(i18n.__("get_started.guidance"));
 
-    let curation = this.genQuickReply(i18n.__("get_started.help"), [
-
+    let elements = [
       {
-        title: i18n.__("menu.help"),
-        payload: "CARE_HELP"
+        image_url:`${config.appUrl}/image004.jpg`,
+        title: "",
+        subtitle: "",
+        buttons: [
+          {
+            type: "postback",
+            title: "Επικοινωνια μαξι μας",
+            payload: "CARE_HELP"
+          }
+        ]
       },
       {
-        title: i18n.__("menu.moreInfo"),
-        payload: "CURATION"
+        image_url: `${config.appUrl}/mieleBots596x335px.jpg`,
+        title: "",
+        subtitle: "",
+        buttons: [
+          {
+            type: "postback",
+            title: "Πληροφοριες προιοντος",
+            payload: "CURATION"
+          }
+        ]
       },
       {
-        title: i18n.__("menu.shop"),
-        payload: "ESHOP"
-      },
-      {
-        title:"test1",
-        payload: "TEST"
-      },
-      {
-        title:"test2",
-        payload: "TEST"
+        image_url: `${config.appUrl}/image005.jpg`,
+        title: "",
+        subtitle: "",
+        buttons: [
+          {
+            type: "postback",
+            title: "Aγορασετε προιον",
+            payload: "CURATION"
+          }
+        ]
       }
-    ]);
+
+
+    ];
+
+    // let curation = this.genQuickReply(i18n.__("get_started.help"), [
+    //
+    //   {
+    //     title: i18n.__("menu.help"),
+    //     payload: "CARE_HELP"
+    //   },
+    //   {
+    //     title: i18n.__("menu.moreInfo"),
+    //     payload: "CURATION"
+    //   },
+    //   {
+    //     title: i18n.__("menu.shop"),
+    //     payload: "ESHOP"
+    //   },
+    //   {
+    //     title:"test1",
+    //     payload: "TEST"
+    //   },
+    //   {
+    //     title:"test2",
+    //     payload: "TEST"
+    //   }
+    // ]);
 
     // let curation = this.genPostbackButton(i18n.__("get_started.help"), [
     //
