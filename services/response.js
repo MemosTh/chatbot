@@ -228,7 +228,7 @@ module.exports = class Response {
     let elements = [
       {
         image_url:`${config.appUrl}/image004.jpg`,
-        title: "",
+        title: "TEST",
         subtitle: "",
         buttons: [
           {
@@ -240,7 +240,7 @@ module.exports = class Response {
       },
       {
         image_url: `${config.appUrl}/mieleBots596x335px.jpg`,
-        title: "",
+        title: "TEST",
         subtitle: "",
         buttons: [
           {
@@ -252,7 +252,7 @@ module.exports = class Response {
       },
       {
         image_url: `${config.appUrl}/image005.jpg`,
-        title: "",
+        title: "TEST",
         subtitle: "",
         buttons: [
           {
