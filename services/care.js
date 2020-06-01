@@ -93,8 +93,8 @@ module.exports = class Care {
               },
               {
                 type: "postback",
-                title: "Miele Experience Center",
-                payload: "Μiele Points & Miele Stores"
+                title: "Μiele Points & Miele Stores",
+                payload: "SERVICE"
               },
 
             ]
