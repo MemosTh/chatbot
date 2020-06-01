@@ -102,10 +102,12 @@ module.exports = class Care {
 
         ];
 
+        let curation = Response.genGenericList(elements);
 
 
 
-        let curation = Response.genQuickReply(i18n.__("care.help"), [
+
+        let help = Response.genQuickReply(i18n.__("care.help"), [
 
         {
           title: i18n.__("menu.yes"),
@@ -116,7 +118,7 @@ module.exports = class Care {
           payload: "CARE_HELP_NO"
         },
       ]);
-      response = [image1,opt1, or,image2, opt2, curation]
+      response = [curation,help]
         break;
       case "CARE_HELP_YES":
         // Send using the Persona for order issues
