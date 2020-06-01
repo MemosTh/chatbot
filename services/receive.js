@@ -14,7 +14,8 @@ const Curation = require("./curation"),
   Order = require("./order"),
   Response = require("./response"),
   Care = require("./care"),
-  GraphAPi = require("./graph-api"),
+    Service=require("./service"),
+    GraphAPi = require("./graph-api"),
   i18n = require("../i18n.config");
 
 module.exports = class Receive {
@@ -228,8 +229,9 @@ module.exports = class Receive {
       response = care.handlePayload(payload);
     } else if (payload.includes("ESHOP")) {
       response = Order.handlePayload(payload);
-    } else if (payload.includes("CSAT")) {
-      response = Survey.handlePayload(payload);
+    } else if (payload.includes("SERVICE")) {
+      let service = new Service(this.user, this.webhookEvent);
+      response = service.handlePayload(payload)
     }
     else
       {
