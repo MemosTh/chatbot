@@ -48,109 +48,199 @@ module.exports = class Curation {
 
             case "CURATION":
 
+
+                let categories = this.genQuickReply(i18n.__("Ποια κατηγορία σας ενδιαφέρει;"), [
+
+                    {
+                        title: "Oικιακές Συσκευές",
+                        payload: "CURATION_FAMILY"
+                    },
+                    {
+                        title: "Επαγγελματικές Συσκευές",
+                        payload: "CURATION_BUSINESS"
+                    }
+                ]);
+
+
+
+
+                response= [categories];
+                break;
+            case "CURATION_FAMILY":
+
                 let elements = [
                     {
-                        image_url:`${config.appUrl}/mieleBots500x260px.jpg`,
-                        title: "mieleBots500x260px",
+                        image_url:`${config.appUrl}/skoupes.jpg`,
+                        title: "Σκούπες",
                         subtitle: "",
-                        buttons: []
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/vacuum-cleaners-1776.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                            },
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr",
+                                title: "ΝΕΑ Triflex"
+                            }
+                        ]
                     },
                     {
-                        image_url: `${config.appUrl}/mieleBots596x335px.jpg`,
-                        title: "mieleBots596x335px ",
+                        image_url: `${config.appUrl}/pl.rouxon.jpg`,
+                        title: "Πλυντήρια Ρούχων",
                         subtitle: "",
-                        buttons: []
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/washing-machines-1561.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
                     },
                     {
-                        image_url: `${config.appUrl}/mieleBots780x410px.jpg`,
-                        title: "mieleBots780x410px",
-                        subtitle: "",
-                        buttons: []
-                    },
-                    {
-                        image_url: `${config.appUrl}/mieleBots1000x520px.jpg`,
-                        title: "mieleBots1000x520px",
-                        subtitle: "",
-                        buttons: []
-                    },
-                    {
-                        image_url: 'https://www.miele.gr/pmedia/06/Z13/20000148507-000-00_20000148507.jpg',
+                        image_url: `${config.appUrl}/stegnotiria.jpg`,
                         title: "Στεγνωτήρια",
                         subtitle: "",
-                        buttons: []
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/tumble-dryers-1570.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
                     },
                     {
-                        image_url: 'https://www.miele.gr/pmedia/18/Z13/20000162768-000-00_20000162768.jpg',
+                        image_url: `${config.appUrl}/pl.piaton.jpg`,
+                        title: "Πλυντήρια Πιάτων",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/dishwashers-1529.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/analosima.jpg`,
+                        title: "Αναλώσιμα Προϊόντα",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/miele-cleaning-products-1802.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/fournoiEstiesAporofitires.jpg`,
+                        title: "Φούρνοι, Εστίες & Απορροφητήρες ",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "postback",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                                payload: "CURATION_FEA"
+                            },
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/siskevesPsiksis.jpg`,
+                        title: "Συσκευές Ψύξης & Συντηρητές Κρασιών",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/refrigerators-freezers-and-wine-units-1717.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/kafetieres.jpg`,
+                        title: "Καφετιέρες",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/coffee-machines-1755.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/siskevesSideromatos.jpg`,
                         title: "Συσκευές Σιδερώματος",
                         subtitle: "",
-                        buttons: []
-                    },
-                    {
-                        image_url: 'https://www.miele.gr/media/domestic_gr/media/layout/products/Staubsauger-big.jpg',
-                        title: "Ηλεκτρικές σκούπες",
-                        subtitle: "",
-                        buttons: []
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: " https://www.miele.gr/domestic/ironers-1586.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
                     },
 
-
-                ];
-
-
-                let buttons = [
-                    {
-                        type: "postback",
-                        title: "ΘΕΛΩ ΝΑ ΜΑΘΩ ΠΕΡΙΣΣΟΤΕΡΑ",
-                        payload: "CURATION_COOK"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_FRIDGE"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_COFFEE"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_WASHER"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_DRY"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_IRON"
-                    },
-                    {
-                        type: "postback",
-                        title: "view",
-                        payload: "CURATION_BROOM"
-                    },
 
                 ];
-                let count = 0;
-                for (let element of elements) {
-                    element["buttons"].push(buttons[count]);
-                    count++;
-                }
 
-                console.log(elements);
+                //
+                // let buttons = [
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_COOK"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_FRIDGE"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_COFFEE"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_WASHER"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_DRY"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_IRON"
+                //     },
+                //     {
+                //         type: "postback",
+                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                //         payload: "CURATION_BROOM"
+                //     },
+                //
+                // ];
+                // let count = 0;
+                // for (let element of elements) {
+                //     element["buttons"].push(buttons[count]);
+                //     count++;
+                // }
+
+
 
                 let list = Response.genGenericList(elements);
-                console.log(response);
 
-
-
-                let message = Response.genText("Ποια κατηγορία σας ενδιαφέρει;");
-                response= [message, list];
                 break;
 
+
+            case "CURATION_FAMILY":
+
+                break;
             case "CURATION_COOK":
 
                 categoryButtons[2].payload="CURATION_COOK_VIEW";
