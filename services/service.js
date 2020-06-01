@@ -22,13 +22,25 @@ module.exports = class Service {
     }
 
     handlePayload(payload) {
+
         let response;
+        let help = Response.genQuickReply(i18n.__("care.help"), [
+
+            {
+                title: i18n.__("menu.yes"),
+                payload: "CARE_HELP_YES"
+            },
+            {
+                title: i18n.__("menu.no"),
+                payload: "CARE_HELP_NO"
+            },
+        ]);
 
         switch (payload) {
             case "SERVICE":
                 let elements = [
                     {
-                        image_url:`${config.appUrl}/epikoinonia.jpg`,
+                        image_url:`${config.appUrl}/bots.jpg`,
                         title: "Καλέστε μας στα τηλέφωνα 801 222 4444 & +30 210 67 94444",
                         subtitle: "Δευτέρα έως Παρασκευή 09:00-17:00",
                         buttons:[
@@ -41,25 +53,32 @@ module.exports = class Service {
                     },
                     {
                         image_url: `${config.appUrl}/videoklisi.jpg`,
-                        title: "Βιντεοκλήση : Δείτε live τα προϊόντα μας στο 6974850525 με Viber, Messenger, Whatsapp:",
+                        title: "Βρείτε το κοντινό σε εσάς Miele Service",
                         subtitle: "Δευτ. - Παρ. 09:00-17:00",
-                        buttons:[
+                        buttons: [
                             {
-                                type:"phone_number",
-                                title:"Κληση",
-                                payload: "6974850525"
+
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/miele-service-3744.htm",
+                                title: "Μετάβαση"
                             }
-                        ]
+                            ]
+
                     },
 
 
                 ];
 
                 let curation = Response.genGenericList(elements);
-                response =[curation]
+
+
+                response =[curation,help]
 
             break;
-            case "SERVICE_TEST":
+            case "SERVICE_CENTER":
+
+            let center = Response.genText("Λεωφ. Μεσογείων 257, Νέο Ψυχικό 154 51,  Τηλ. 21 0679 4444");
+                response =[center,help]
 
 
 

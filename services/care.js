@@ -89,12 +89,12 @@ module.exports = class Care {
               {
                 type: "postback",
                 title: "Miele Experience Center",
-                payload: "SERVICE"
+                payload: "SERVICE_CENTER"
               },
               {
                 type: "postback",
                 title: "Μiele Points & Miele Stores",
-                payload: "SERVICE"
+                payload: "SERVICE_POINTS"
               },
 
             ]
