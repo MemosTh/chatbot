@@ -234,11 +234,12 @@ module.exports = class Curation {
 
 
                 let list = Response.genGenericList(elements);
+                response=[list]
 
                 break;
 
 
-            case "CURATION_FAMILY":
+            case "CURATION_BUSINESS":
 
                 break;
             case "CURATION_COOK":
