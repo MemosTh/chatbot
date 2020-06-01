@@ -34,13 +34,77 @@ module.exports = class Care {
       // let opt2 = Response.genText(i18n.__("care.opt2"));
 
 
-        let image1 = Response.GenericMedia('image',`${config.appUrl}/image004.jpg`);
-      //  let opt1= Response.genText(i18n.__("care.opt1"));
-          let opt1 = Response.GenericCallButton(i18n.__("care.opt1"),"+302106794444")
-        let or = Response.genText(i18n.__("care.or"));
-        let image2 = Response.GenericMedia('image',`${config.appUrl}/image005.jpg`);
-        //let opt2 = Response.genText(i18n.__("care.opt2"));
-        let opt2 = Response.GenericCallButton(i18n.__("care.opt2"),"+306974850525")
+      //   let image1 = Response.GenericMedia('image',`${config.appUrl}/image004.jpg`);
+      // //  let opt1= Response.genText(i18n.__("care.opt1"));
+      //     let opt1 = Response.GenericCallButton(i18n.__("care.opt1"),"+302106794444")
+      //   let or = Response.genText(i18n.__("care.or"));
+      //   let image2 = Response.GenericMedia('image',`${config.appUrl}/image005.jpg`);
+      //   //let opt2 = Response.genText(i18n.__("care.opt2"));
+      //   let opt2 = Response.GenericCallButton(i18n.__("care.opt2"),"+306974850525")
+
+
+
+        let elements = [
+          {
+            image_url:`${config.appUrl}/epikoinonia.jpg`,
+            title: "Καλέστε μας στα τηλέφωνα 801 222 4444 & +30 210 67 94444",
+            subtitle: "Δευτέρα έως Παρασκευή 09:00-17:00",
+            buttons:[
+              {
+                type:"phone_number",
+                title:"Κληση",
+                payload: "+302106794444"
+              }
+            ]
+          },
+          {
+            image_url: `${config.appUrl}/videoklisi.jpg`,
+            title: "Βιντεοκλήση : Δείτε live τα προϊόντα μας στο 6974850525 με Viber, Messenger, Whatsapp:",
+            subtitle: "Δευτ. - Παρ. 09:00-17:00",
+            buttons:[
+              {
+                type:"phone_number",
+                title:"Κληση",
+                payload: "6974850525"
+              }
+            ]
+          },
+          {
+            image_url: `${config.appUrl}/service.jpg`,
+            title: "Service",
+            subtitle: "",
+            buttons: [
+              {
+                type: "postback",
+                title: "Service",
+                payload: "SERVICE"
+              }
+            ]
+          },
+          {
+            image_url: `${config.appUrl}/katastima.jpg`,
+            title: "Επίσκεψη σε κατάστημα",
+            subtitle: "",
+            buttons: [
+              {
+                type: "postback",
+                title: "Miele Experience Center",
+                payload: "SERVICE"
+              },
+              {
+                type: "postback",
+                title: "Miele Experience Center",
+                payload: "Μiele Points & Miele Stores"
+              },
+
+            ]
+          }
+
+        ];
+
+
+
+
         let curation = Response.genQuickReply(i18n.__("care.help"), [
 
         {
