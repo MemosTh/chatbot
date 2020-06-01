@@ -26,7 +26,10 @@ module.exports = class Service {
 
         switch (payload) {
             case "SERVICE":
-                let response = Response.genText(i18n.__("care.opt1"));
+                let response = Response.genText("this is test ");
+
+            case "SERVICE_TEST":
+                
 
 
         }
