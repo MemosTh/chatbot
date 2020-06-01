@@ -49,7 +49,7 @@ module.exports = class Curation {
             case "CURATION":
 
 
-                let categories = this.genQuickReply(i18n.__("Ποια κατηγορία σας ενδιαφέρει;"), [
+                let categories = Response.genQuickReply(i18n.__("Ποια κατηγορία σας ενδιαφέρει;"), [
 
                     {
                         title: "Oικιακές Συσκευές",
