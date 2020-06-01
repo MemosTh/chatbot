@@ -20,7 +20,7 @@ module.exports = class Profile {
   setWebhook() {
     GraphAPi.callSubscriptionsAPI();
     GraphAPi.callSubscribedApps();
-    this.setPersistentMenu();
+    
 
   }
 

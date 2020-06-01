@@ -287,7 +287,7 @@ module.exports = class Curation {
                     },
                     ];
 
-                let business = Response.genGenericList(elements);
+                let business = Response.genGenericList(elements_Business);
 
                 response=[business,help]
 
