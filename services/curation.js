@@ -90,7 +90,7 @@ module.exports = class Curation {
 
                 ];
 
-                let list_categories = Response.genGenericList(elements);
+                let list_categories = Response.genGenericList(categories);
 
 
 
