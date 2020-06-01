@@ -127,6 +127,10 @@ module.exports = class Care {
         response = Response.genQuickReply(i18n.__("get_started.help"), [
 
           {
+            title: i18n.__("menu.help"),
+            payload: "CARE_HELP"
+          },
+          {
             title: i18n.__("menu.moreInfo"),
             payload: "CURATION"
           },
@@ -134,6 +138,10 @@ module.exports = class Care {
             title: i18n.__("menu.shop"),
             payload: "ESHOP"
           },
+          {
+            title: i18n.__("menu.newsletter"),
+            payload: "CURATION_NEWSLETTER"
+          }
         ]);
 
         break;
@@ -144,24 +152,7 @@ module.exports = class Care {
        response = Response.genText(i18n.__("care.end"));
         break;
 
-      case "CARE_SALES":
-        // Send using the Persona for sales questions
 
-        response = [
-          Response.genTextWithPersona(
-            i18n.__("care.style", {
-              userFirstName: this.user.firstName,
-              agentFirstName: config.personaSales.name
-            }),
-            config.personaSales.id
-          ),
-          Response.genTextWithPersona(
-            i18n.__("care.end"),
-            config.personaSales.id
-          ),
-          Survey.genAgentRating(config.personaSales.name)
-        ];
-        break;
 
     }
 
