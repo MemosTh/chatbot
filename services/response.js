@@ -283,7 +283,7 @@ module.exports = class Response {
       },
       {
         title: i18n.__("menu.newsletter"),
-        payload: "NEWSLETTER"
+        payload: "CURATION_NEWSLETTER"
       }
     ]);
 

@@ -81,7 +81,7 @@ module.exports = class Service {
                 response =[center,help]
                 break;
 
-            case "SERVICE_POINTS":
+
 
 
 
