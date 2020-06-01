@@ -90,10 +90,12 @@ module.exports = class Curation {
 
                 ];
 
+                let list_categories = Response.genGenericList(elements);
 
 
 
-                response= [categories];
+
+                response= [list_categories];
                 break;
             case "CURATION_FAMILY":
 
