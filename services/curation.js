@@ -241,6 +241,67 @@ module.exports = class Curation {
 
             case "CURATION_BUSINESS":
 
+                let elements_Business = [
+                    {
+                        image_url:`${config.appUrl}/epagelmatika.jpg`,
+                        title: "Ενημερωθείτε για τις Επαγγελματικές λύσεις της Miele Professional",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/professional/index.htm",
+                                title: "ΕΝΗΜΕΡΩΣΗ",
+                            }
+                        ]
+                    },
+                    ];
+
+
+
+                break;
+            case "CURATION_FEA":
+
+                let elements_Fea = [
+                    {
+                        image_url:`${config.appUrl}/fournoi.jpg`,
+                        title: "Φούρνοι",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/esties.jpg`,
+                        title: "Εστίες",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: " https://www.miele.gr/domestic/hobs-1492.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    },
+                    {
+                        image_url: `${config.appUrl}/aporofitires.jpg`,
+                        title: "Απορροφητήρες ",
+                        subtitle: "",
+                        buttons: [
+                            {
+                                type: "web_url",
+                                url: "https://www.miele.gr/domestic/cooker-hoods-1638.htm",
+                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ"
+                            }
+                        ]
+                    }
+                    ];
+
+                response= Response.genGenericList(elements_Fea);
+
                 break;
             case "CURATION_COOK":
 
