@@ -354,7 +354,7 @@ module.exports = class Curation {
                     ];
 
 
-                let newsletter = Response.genGenericList(elements_Fea);
+                let newsletter = Response.genGenericList(elements_newsletter);
                 response=[newsletter,help]
                 break;
 
