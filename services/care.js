@@ -92,9 +92,10 @@ module.exports = class Care {
                 payload: "SERVICE_CENTER"
               },
               {
-                type: "postback",
-                title: "Μiele Points & Miele Stores",
-                payload: "SERVICE_POINTS"
+
+                type: "web_url",
+                url: "https://www.miele.gr/domestic/dealer-search-384.htm",
+                title: "Μiele Points & Stores"
               },
 
             ]

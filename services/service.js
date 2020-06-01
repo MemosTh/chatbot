@@ -79,6 +79,11 @@ module.exports = class Service {
 
             let center = Response.genText("Λεωφ. Μεσογείων 257, Νέο Ψυχικό 154 51,  Τηλ. 21 0679 4444");
                 response =[center,help]
+                break;
+
+            case "SERVICE_POINTS":
+
+
 
 
 
