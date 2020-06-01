@@ -167,6 +167,12 @@ module.exports = class Profile {
           title: i18n.__("menu.shop"),
           url: config.shopUrl,
           webview_height_ratio: "full"
+        },
+        {
+          type: "web_url",
+          title: i18n.__("menu.newsletter"),
+          url: "https://www.miele.gr/domestic/newsletter-2156.htm",
+          webview_height_ratio: "full"
         }
       ]
     };
