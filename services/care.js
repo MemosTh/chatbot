@@ -52,7 +52,7 @@ module.exports = class Care {
             buttons:[
               {
                 type:"phone_number",
-                title:"Κληση",
+                title:"ΚΛΗΣΗ",
                 payload: "+302106794444"
               }
             ]
@@ -64,7 +64,7 @@ module.exports = class Care {
             buttons:[
               {
                 type:"phone_number",
-                title:"Κληση",
+                title:"ΚΛΗΣΗ",
                 payload: "6974850525"
               }
             ]

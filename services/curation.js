@@ -108,7 +108,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/vacuum-cleaners-1776.htm",
-                                title: "Μετάβαση στο E-shop",
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP",
                             },
                             {
                                 type: "web_url",
@@ -125,7 +125,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/washing-machines-1561.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -137,7 +137,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/tumble-dryers-1570.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -149,7 +149,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/dishwashers-1529.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -161,7 +161,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/miele-cleaning-products-1802.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -185,7 +185,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/refrigerators-freezers-and-wine-units-1717.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -197,7 +197,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/coffee-machines-1755.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -209,7 +209,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: " https://www.miele.gr/domestic/ironers-1586.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -305,7 +305,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/baking-and-steam-ovens-1442.htm",
-                                title: "Μετάβαση στο E-shop",
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP",
                             }
                         ]
                     },
@@ -317,7 +317,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: " https://www.miele.gr/domestic/hobs-1492.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     },
@@ -329,7 +329,7 @@ module.exports = class Curation {
                             {
                                 type: "web_url",
                                 url: "https://www.miele.gr/domestic/cooker-hoods-1638.htm",
-                                title: "Μετάβαση στο E-shop"
+                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
                             }
                         ]
                     }
