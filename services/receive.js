@@ -170,6 +170,10 @@ module.exports = class Receive {
             title: i18n.__("menu.shop"),
             payload: "ESHOP"
           },
+          {
+            title: i18n.__("menu.newsletter"),
+            payload: "CURATION_NEWSLETTER"
+          }
         ])
       ];
     }
