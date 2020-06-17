@@ -33,7 +33,7 @@ module.exports = class Profile {
     let profilePayload = {
       ...this.getGetStarted(),
       ...this.getGreeting(),
-      ...this.getPersistentMenu()
+      // ...this.getPersistentMenu()
     };
 
     GraphAPi.callMessengerProfileAPI(profilePayload);
@@ -158,6 +158,23 @@ module.exports = class Profile {
           title: i18n.__("menu.help"),
           type: "postback",
           payload: "CARE_HELP"
+        },
+        {
+          title: i18n.__("menu.moreInfo"),
+          type: "postback",
+          payload: "CURATION"
+        },
+        {
+          type: "web_url",
+          title: i18n.__("menu.shop"),
+          url: config.shopUrl,
+          webview_height_ratio: "full"
+        },
+        {
+          type: "web_url",
+          title: i18n.__("menu.newsletter"),
+          url: "https://www.miele.gr/domestic/newsletter-2156.htm",
+          webview_height_ratio: "full"
         }
       ]
     };
