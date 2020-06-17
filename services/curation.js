@@ -60,7 +60,7 @@ module.exports = class Curation {
 
             case "CURATION":
 
-                var video = Response.genGenericMedia("video", `${config.appUrl}/triflex.mp4` );
+                var video = Response.genGenericMedia("video", `${config.appUrl}/video.mov` );
                     var opts = Response.genQuickReply("Πως θέλετε να συνεχίσουμε;",[
                         {
                             type: "postback",
