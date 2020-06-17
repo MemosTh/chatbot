@@ -60,42 +60,21 @@ module.exports = class Curation {
 
             case "CURATION":
 
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/Miele.Hellas/videos/962256810875854/");
+                    var opts = Response.genQuickReply("Πως θέλετε να συνεχίσουμε;",[
+                        {
+                            type: "postback",
+                            title: "Αγορά Προϊόντος",
+                            payload: "ESHOP",
+                        },
+                        {
+                            type: "postback",
+                            title: "Eπικοινωνία",
+                            payload:"CARE_HELP"
+                        },
 
-                let categories = [
-                    {
-                        image_url:`${config.appUrl}/oikiakesSiskeves.jpg`,
-                        title: "Oικιακές Συσκευές",
-                        subtitle: "Τα πάντα για το σπίτι σας(πχ)",
-                        buttons: [
-                            {
-                                type: "postback",
-                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                                payload:"CURATION_FAMILY"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/epagelmatika.jpg`,
-                        title: "Επαγγελματικές Συσκευές",
-                        subtitle: "Τα πάντα για την επιχείρηση σας(πχ)",
-                        buttons: [
-                            {
-                                type: "postback",
-                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                                payload:"CURATION_BUSINESS"
-                            }
-                        ]
-                    },
-
-
-                ];
-
-                let list_categories = Response.genGenericList(categories);
-
-
-
-
-                response= [list_categories];
+                    ]);
+                    response=[video,opts];
                 break;
             case "CURATION_SHOW":
 

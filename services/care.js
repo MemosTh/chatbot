@@ -68,38 +68,38 @@ module.exports = class Care {
                 payload: "6974850525"
               }
             ]
-          },
-          {
-            image_url: `${config.appUrl}/service.jpg`,
-            title: "Service",
-            subtitle: "",
-            buttons: [
-              {
-                type: "postback",
-                title: "Service",
-                payload: "SERVICE"
-              }
-            ]
-          },
-          {
-            image_url: `${config.appUrl}/katastima.jpg`,
-            title: "Επίσκεψη σε κατάστημα",
-            subtitle: "",
-            buttons: [
-              {
-                type: "postback",
-                title: "Miele Experience Center",
-                payload: "SERVICE_CENTER"
-              },
-              {
-
-                type: "web_url",
-                url: "https://www.miele.gr/domestic/dealer-search-384.htm",
-                title: "Μiele Points & Stores"
-              },
-
-            ]
           }
+          // {
+          //   image_url: `${config.appUrl}/service.jpg`,
+          //   title: "Service",
+          //   subtitle: "",
+          //   buttons: [
+          //     {
+          //       type: "postback",
+          //       title: "Service",
+          //       payload: "SERVICE"
+          //     }
+          //   ]
+          // },
+          // {
+          //   image_url: `${config.appUrl}/katastima.jpg`,
+          //   title: "Επίσκεψη σε κατάστημα",
+          //   subtitle: "",
+          //   buttons: [
+          //     {
+          //       type: "postback",
+          //       title: "Miele Experience Center",
+          //       payload: "SERVICE_CENTER"
+          //     },
+          //     {
+          //
+          //       type: "web_url",
+          //       url: "https://www.miele.gr/domestic/dealer-search-384.htm",
+          //       title: "Μiele Points & Stores"
+          //     },
+          //
+          //   ]
+          // }
 
         ];
 

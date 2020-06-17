@@ -271,7 +271,7 @@ module.exports = class Response {
 
       {
         title: i18n.__("menu.show"),
-        payload: "CURATION_SHOW"
+        payload: "CURATION"
       },
       {
         title: i18n.__("menu.shop"),
@@ -279,7 +279,7 @@ module.exports = class Response {
       },
       {
         title: i18n.__("menu.moreInfo"),
-        payload: "CURATION"
+        payload: "CURATION_SHOW"
       },
     ]);
 
