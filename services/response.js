@@ -62,7 +62,7 @@ module.exports = class Response {
 
   }
 
-  static genGenericMedia(media_type, url) {
+  static genGenericMedia(media_type, url ,buttons) {
     let response = {
       attachment: {
         type: "template",
@@ -71,7 +71,8 @@ module.exports = class Response {
           elements: [
             {
               media_type: media_type,
-              url: url
+              url: url,
+              buttons:[buttons]
             }
           ]
         }
