@@ -76,7 +76,7 @@ module.exports = class Response {
                 {
                   type: "web_url",
                   url: "https://www.miele.gr/domestic/shop-2151.htm",
-                  title: "Μετάβαση στο E-shop"
+                  title: "ESHOP"
                 }
               ]
 
