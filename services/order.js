@@ -31,7 +31,7 @@ module.exports = class Order {
 
         ];
 
-        response = Response.genGenericMedia("video", "https://www.facebook.com/Miele.Hellas/videos/962256810875854/", button1);
+         response = Response.genGenericMedia("video", "https://www.facebook.com/Miele.Hellas/videos/962256810875854/", "cc");
 
     }
     return response;

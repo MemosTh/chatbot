@@ -72,7 +72,14 @@ module.exports = class Response {
             {
               media_type: media_type,
               url: url,
-              
+              buttons: [
+                {
+                  type: "web_url",
+                  url: "https://www.miele.gr/domestic/shop-2151.htm",
+                  title: "Μετάβαση στο E-shop"
+                }
+              ]
+
             }
           ]
         }
