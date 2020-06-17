@@ -270,21 +270,17 @@ module.exports = class Response {
     let curation = this.genQuickReply(i18n.__("get_started.help"), [
 
       {
-        title: i18n.__("menu.help"),
+        title: i18n.__("menu.show"),
         payload: "CARE_HELP"
       },
       {
-        title: i18n.__("menu.moreInfo"),
+        title: i18n.__("menu.shop"),
         payload: "CURATION"
       },
       {
-        title: i18n.__("menu.shop"),
+        title: i18n.__("menu.moreInfo"),
         payload: "ESHOP"
       },
-      {
-        title: i18n.__("menu.newsletter"),
-        payload: "CURATION_NEWSLETTER"
-      }
     ]);
 
     // let curation = this.genPostbackButton(i18n.__("get_started.help"), [

@@ -3,10 +3,9 @@
     "greeting": "Καλώς ήλθατε στην Miele {{user_first_name}}! Πατήστε το Ας Ξεκινησουμε "
   },
   "menu": {
-    "help": "Επικοινωνία",
-    "moreInfo": "Προϊόντα",
-    "shop": "Αγοράστε προϊόν",
-    "newsletter": "Eγγραφή στο newsletter",
+    "show": "Δείτε την Triflex σε χρήση",
+    "moreInfo": "Περισσότερες Πληροφορίες",
+    "shop": "Mετάβαση στο e-shop",
     "start_over": "Ας Ξεκινήσουμε",
     "yes":"Ναι",
     "no":"Όχι"
