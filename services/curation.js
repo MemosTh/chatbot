@@ -97,175 +97,34 @@ module.exports = class Curation {
 
                 response= [list_categories];
                 break;
-            case "CURATION_FAMILY":
+            case "CURATION_SHOW":
 
-                let elements = [
+                let button1 = [
                     {
-                        image_url:`${config.appUrl}/skoupes.jpg`,
-                        title: "Σκούπες",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/vacuum-cleaners-1776.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP",
-                            },
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr",
-                                title: "ΝΕΑ Triflex"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/pl.rouxon.jpg`,
-                        title: "Πλυντήρια Ρούχων",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/washing-machines-1561.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/stegnotiria.jpg`,
-                        title: "Στεγνωτήρια",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/tumble-dryers-1570.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/pl.piaton.jpg`,
-                        title: "Πλυντήρια Πιάτων",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/dishwashers-1529.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/analosima.jpg`,
-                        title: "Αναλώσιμα Προϊόντα",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/miele-cleaning-products-1802.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/fournoiEstiesAporofitires.jpg`,
-                        title: "Φούρνοι, Εστίες & Απορροφητήρες ",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "postback",
-                                title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                                payload: "CURATION_FEA"
-                            },
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/siskevesPsiksis.jpg`,
-                        title: "Συσκευές Ψύξης & Συντηρητές Κρασιών",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/refrigerators-freezers-and-wine-units-1717.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/kafetieres.jpg`,
-                        title: "Καφετιέρες",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: "https://www.miele.gr/domestic/coffee-machines-1755.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
-                    {
-                        image_url: `${config.appUrl}/siskevesSideromatos.jpg`,
-                        title: "Συσκευές Σιδερώματος",
-                        subtitle: "",
-                        buttons: [
-                            {
-                                type: "web_url",
-                                url: " https://www.miele.gr/domestic/ironers-1586.htm",
-                                title: "ΜΕΤΑΒΑΣΗ ΣΤΟ E-SHOP"
-                            }
-                        ]
-                    },
 
+                        type: "web_url",
+                        url: "https://www.miele.gr/",
+                        title: "Μετάβαση στο microsite"
+                    }
 
                 ];
 
-                //
-                // let buttons = [
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_COOK"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_FRIDGE"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_COFFEE"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_WASHER"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_DRY"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_IRON"
-                //     },
-                //     {
-                //         type: "postback",
-                //         title: "ΠΡΟΒΟΛΗ ΚΑΤΗΓΟΡΙΑΣ",
-                //         payload: "CURATION_BROOM"
-                //     },
-                //
-                // ];
-                // let count = 0;
-                // for (let element of elements) {
-                //     element["buttons"].push(buttons[count]);
-                //     count++;
-                // }
+                var element =[
 
+                    {
+                        title: "New Triflex",
+                        subtitle:"Περισσότερες πληροφορίες",
+                        image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg",
+                        default_action: {
+                            type: "web_url",
+                            url : "https://www.miele.gr/",
+                            webview_height_ratio: "full",
+                        },
+                        buttons:button1
+                    },
 
-
-                let list = Response.genGenericList(elements);
-                response=[list,help]
+                ]
+                response = Response.genGenericTemplate(element);
 
                 break;
 

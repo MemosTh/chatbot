@@ -271,15 +271,15 @@ module.exports = class Response {
 
       {
         title: i18n.__("menu.show"),
-        payload: "CARE_HELP"
+        payload: "CURATION_SHOW"
       },
       {
         title: i18n.__("menu.shop"),
-        payload: "CURATION"
+        payload: "ESHOP"
       },
       {
         title: i18n.__("menu.moreInfo"),
-        payload: "ESHOP"
+        payload: "CURATION"
       },
     ]);
 
