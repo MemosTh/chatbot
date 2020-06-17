@@ -60,7 +60,7 @@ module.exports = class Curation {
 
             case "CURATION":
 
-                var video = Response.genGenericMedia("video", "https://www.facebook.com/Miele.Hellas/videos/962256810875854/", "");
+                var video = Response.genGenericMedia("video", "https://www.facebook.com/Miele.Hellas/videos/962256810875854/", categoryButtons);
                     var opts = Response.genQuickReply("Πως θέλετε να συνεχίσουμε;",[
                         {
                             type: "postback",

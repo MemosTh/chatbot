@@ -72,7 +72,7 @@ module.exports = class Response {
             {
               media_type: media_type,
               url: url,
-              buttons:[buttons]
+              
             }
           ]
         }
