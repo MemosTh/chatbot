@@ -98,12 +98,9 @@ module.exports = class Receive {
         ),
         Response.genText(i18n.__("get_started.guidance")),
         Response.genQuickReply(i18n.__("get_started.help"), [
+
           {
-            title: i18n.__("menu.help"),
-            payload: "CARE_HELP"
-          },
-          {
-            title: i18n.__("menu.moreInfo"),
+            title: i18n.__("menu.show"),
             payload: "CURATION"
           },
           {
@@ -111,8 +108,8 @@ module.exports = class Receive {
             payload: "ESHOP"
           },
           {
-            title: i18n.__("menu.newsletter"),
-            payload: "CURATION_NEWSLETTER"
+            title: i18n.__("menu.moreInfo"),
+            payload: "CURATION_SHOW"
           }
         ])
       ];

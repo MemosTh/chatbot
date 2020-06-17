@@ -82,8 +82,8 @@ module.exports = class Curation {
                     {
 
                         type: "web_url",
-                        url: "https://www.miele.gr/",
-                        title: "Μετάβαση στο microsite"
+                        url: "https://www.miele.gr/triflex/",
+                        title: "Μετάβαση στο site"
                     }
 
                 ];
@@ -96,7 +96,7 @@ module.exports = class Curation {
                         image_url: "https://www.miele.gr/media/domestic_gr/media/assets_288_x/20000154793_Zuschnitt.jpg",
                         default_action: {
                             type: "web_url",
-                            url : "https://www.miele.gr/",
+                            url : "https://www.miele.gr/triflex/",
                             webview_height_ratio: "full",
                         },
                         buttons:button1
