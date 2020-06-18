@@ -69,7 +69,7 @@ module.exports = class Curation {
                             elements: [
                                 {
                                     media_type: "video",
-                                    attachment_id: "1088189374915933",
+                                    attachment_id: "1119808891717103",
                                     buttons: []
 
                                 }
