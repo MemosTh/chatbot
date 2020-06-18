@@ -69,26 +69,29 @@ module.exports = class Curation {
                             elements: [
                                 {
                                     media_type: "video",
-                                    attachment_id: "352402962408030",
-                                    buttons: [
-                                        {
-                                            type: "postback",
-                                            title: "Αγορά Προϊόντος",
-                                            payload: "ESHOP",
-                                        },
-                                        {
-                                            type: "postback",
-                                            title: "Eπικοινωνία",
-                                            payload:"CARE_HELP"
-                                        },
-                                    ]
+                                    attachment_id: "1088189374915933",
+                                    buttons: []
 
                                 }
                             ]
                         }
                     }
                 };
-                    response=[response_video];
+
+                    var opts = Response.genQuickReply("Πως θέλετε να συνεχίσουμε;",[
+                        {
+                            type: "postback",
+                            title: "Αγορά Προϊόντος",
+                            payload: "ESHOP",
+                        },
+                        {
+                            type: "postback",
+                            title: "Eπικοινωνία",
+                            payload:"CARE_HELP"
+                        },
+
+                    ]);
+                    response=[response_video, opts];
                 break;
             case "CURATION_SHOW":
 
