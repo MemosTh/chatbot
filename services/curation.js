@@ -60,21 +60,35 @@ module.exports = class Curation {
 
             case "CURATION":
 
-                var video = Response.GenericMedia("video", `${config.appUrl}/triflex.mp4` );
-                    var opts = Response.genQuickReply("Πως θέλετε να συνεχίσουμε;",[
-                        {
-                            type: "postback",
-                            title: "Αγορά Προϊόντος",
-                            payload: "ESHOP",
-                        },
-                        {
-                            type: "postback",
-                            title: "Eπικοινωνία",
-                            payload:"CARE_HELP"
-                        },
 
-                    ]);
-                    response=[video,opts];
+                let response_video = {
+                    attachment: {
+                        type: "template",
+                        payload: {
+                            template_type: "media",
+                            elements: [
+                                {
+                                    media_type: media_type,
+                                    attachment_id: "1088189374915933",
+                                    buttons: [
+                                        {
+                                            type: "postback",
+                                            title: "Αγορά Προϊόντος",
+                                            payload: "ESHOP",
+                                        },
+                                        {
+                                            type: "postback",
+                                            title: "Eπικοινωνία",
+                                            payload:"CARE_HELP"
+                                        },
+                                    ]
+
+                                }
+                            ]
+                        }
+                    }
+                };
+                    response=[response_video];
                 break;
             case "CURATION_SHOW":
 

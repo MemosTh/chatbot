@@ -80,11 +80,33 @@ module.exports = class Response {
       }
     };
 
+      return response;
+  }
 
 
+  static genGenericMediaAtachment(media_type, id) {
+    let response = {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "media",
+          elements: [
+            {
+              media_type: media_type,
+              attachment_id: "1088189374915933",
+              buttons: []
+
+            }
+          ]
+        }
+      }
+    };
     return response;
   }
-  static GenericCallButton(text, number) {
+
+
+
+    static GenericCallButton(text, number) {
 
     let response = {
       attachment: {
