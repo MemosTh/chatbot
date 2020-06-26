@@ -69,7 +69,7 @@ module.exports = class Curation {
                         buttons: [
                             {
                                 type: "postback",
-                                title: "🤓 I'm Ready to Learn",
+                                title: "ΠΡΟΒΟΛΗ",
                                 payload:"CURATION_FAMILY"
                             }
                         ]
@@ -81,7 +81,7 @@ module.exports = class Curation {
                         buttons: [
                             {
                                 type: "postback",
-                                title: "ΔΕΣ ΤΗΝ ΚΑΤΗΓΟΡΙΑ",
+                                title: "Δες την κατηγορία",
                                 payload:"CURATION_BUSINESS"
                             }
                         ]
