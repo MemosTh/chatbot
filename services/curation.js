@@ -81,7 +81,7 @@ module.exports = class Curation {
                         buttons: [
                             {
                                 type: "postback",
-                                title: "Δες την κατηγορία",
+                                title: "ΔΕΣ ΤΗΝ ΚΑΤΗΓΟΡΙΑ",
                                 payload:"CURATION_BUSINESS"
                             }
                         ]
